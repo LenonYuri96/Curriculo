@@ -413,4 +413,127 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const yearEl = document.getElementById("current-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // =========================================================================
+  // 7. MOTOR DE PARALAXE 60 FPS (CORTINA HERO + ANÉIS/CHIPS + FAIXAS + 3D)
+  // =========================================================================
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  const hasFinePointer =
+    window.matchMedia("(any-pointer: fine)").matches &&
+    window.innerWidth >= 992;
+
+  if (!reduceMotion) {
+    const heroEl = document.getElementById("top");
+    const heroInner = document.querySelector(".hero-parallax-inner");
+    const heroCanvas = document.getElementById("heroCanvas");
+    const depthItems = document.querySelectorAll(
+      ".parallax-orb, .parallax-ring, .parallax-float-chip",
+    );
+    const bandBgs = document.querySelectorAll(".parallax-band-bg");
+
+    let targetMX = 0,
+      targetMY = 0;
+    let curMX = 0,
+      curMY = 0;
+    let rafPending = false;
+
+    if (hasFinePointer && heroEl) {
+      heroEl.addEventListener("mousemove", (e) => {
+        const rect = heroEl.getBoundingClientRect();
+        targetMX = (e.clientX - rect.left) / rect.width - 0.5;
+        targetMY = (e.clientY - rect.top) / rect.height - 0.5;
+        scheduleParallax();
+      });
+    }
+
+    function updateParallax() {
+      rafPending = false;
+      const sy = window.scrollY;
+
+      curMX += (targetMX - curMX) * 0.1;
+      curMY += (targetMY - curMY) * 0.1;
+
+      if (heroEl) {
+        const heroH = heroEl.offsetHeight || 750;
+
+        if (sy <= heroH * 1.25) {
+          // Camadas com profundidades diferentes (orbs, anéis e chips)
+          depthItems.forEach((el) => {
+            const speedY = parseFloat(el.dataset.parallaxY || "0.25");
+            const factorX = parseFloat(el.dataset.parallaxX || "30");
+            const tx = curMX * factorX;
+            const ty = sy * speedY + curMY * Math.abs(factorX) * 0.7;
+            el.style.transform = `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0)`;
+          });
+
+          if (heroCanvas) {
+            heroCanvas.style.transform = `translate3d(${(curMX * -20).toFixed(1)}px, ${(sy * 0.35).toFixed(1)}px, 0)`;
+          }
+
+          // Efeito cortina: texto do Hero desce mais devagar enquanto #flagship sobe por cima
+          if (heroInner) {
+            const progress = Math.min(sy / heroH, 1);
+            heroInner.style.transform = `translate3d(0, ${(sy * 0.36).toFixed(1)}px, 0)`;
+            heroInner.style.opacity = Math.max(
+              1 - progress * 0.95,
+              0.08,
+            ).toFixed(3);
+          }
+        }
+      }
+
+      // Movimento das Faixas Parallax entre seções
+      bandBgs.forEach((bg) => {
+        const parent = bg.parentElement;
+        const rect = parent.getBoundingClientRect();
+        if (rect.bottom >= -50 && rect.top <= window.innerHeight + 50) {
+          const speed = parseFloat(bg.dataset.bandSpeed || "0.35");
+          const centerOffset = rect.top - window.innerHeight * 0.5;
+          bg.style.transform = `translate3d(0, ${(centerOffset * -speed).toFixed(1)}px, 0)`;
+        }
+      });
+
+      if (
+        Math.abs(targetMX - curMX) > 0.002 ||
+        Math.abs(targetMY - curMY) > 0.002
+      ) {
+        scheduleParallax();
+      }
+    }
+
+    function scheduleParallax() {
+      if (!rafPending) {
+        rafPending = true;
+        requestAnimationFrame(updateParallax);
+      }
+    }
+
+    window.addEventListener("scroll", scheduleParallax, { passive: true });
+    scheduleParallax();
+
+    // Spotlight + micro-inclinação 3D nos cards
+    if (hasFinePointer) {
+      document.querySelectorAll(".modern-card").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const r = card.getBoundingClientRect();
+          const x = e.clientX - r.left;
+          const y = e.clientY - r.top;
+          card.style.setProperty("--mx", `${x}px`);
+          card.style.setProperty("--my", `${y}px`);
+
+          if (card.classList.contains("project-card")) {
+            const rx = (y / r.height - 0.5) * -4;
+            const ry = (x / r.width - 0.5) * 4;
+            card.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-5px)`;
+          }
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "";
+        });
+      });
+    }
+  }
 });

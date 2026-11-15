@@ -2038,6 +2038,187 @@ footer p {
 }
 
 /* ==========================================================================
+   PARALAXE VISÍVEL: EFEITO CORTINA NO HERO + ANÉIS + FAIXAS PARALLAX
+   ========================================================================== */
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+#flagship {
+  position: relative;
+  z-index: 5;
+  background-color: var(--bs-body-bg);
+  box-shadow: 0 -24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.parallax-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(65px);
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+.orb-1 {
+  width: 420px;
+  height: 420px;
+  top: -80px;
+  left: -60px;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.55),
+    transparent 70%
+  );
+}
+.orb-2 {
+  width: 380px;
+  height: 380px;
+  top: 20%;
+  right: -80px;
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.42), transparent 70%);
+}
+.orb-3 {
+  width: 340px;
+  height: 340px;
+  bottom: -90px;
+  left: 38%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.38), transparent 70%);
+}
+
+/* Anéis orbitais e chips flutuantes com contraste real */
+.parallax-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(34, 211, 238, 0.25);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+.ring-1 {
+  width: 520px;
+  height: 520px;
+  top: -140px;
+  right: -120px;
+}
+.ring-2 {
+  width: 380px;
+  height: 380px;
+  bottom: -110px;
+  left: -90px;
+  border-color: rgba(251, 113, 133, 0.25);
+}
+
+.parallax-float-chip {
+  position: absolute;
+  font-family: "Fira Code", monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.chip-1 {
+  top: 18%;
+  left: 7%;
+}
+.chip-2 {
+  top: 22%;
+  right: 8%;
+}
+.chip-3 {
+  bottom: 20%;
+  left: 9%;
+}
+.chip-4 {
+  bottom: 18%;
+  right: 9%;
+}
+
+@media (max-width: 991.98px) {
+  .parallax-float-chip,
+  .parallax-ring {
+    display: none;
+  }
+}
+
+/* Faixas Parallax entre seções */
+.parallax-band {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 0;
+  background: #0b0f19;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.parallax-band-bg {
+  position: absolute;
+  inset: -120px 0;
+  background-image:
+    radial-gradient(
+      circle at 25% 50%,
+      rgba(124, 58, 237, 0.45),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(6, 182, 212, 0.35),
+      transparent 50%
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    40px 40px,
+    40px 40px;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.parallax-band-alt .parallax-band-bg {
+  background-image:
+    radial-gradient(circle at 30% 50%, rgba(225, 29, 72, 0.4), transparent 50%),
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(124, 58, 237, 0.4),
+      transparent 50%
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+}
+
+/* Spotlight nos cards */
+.modern-card {
+  position: relative;
+  overflow: hidden;
+}
+.modern-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(34, 211, 238, 0.12),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.modern-card:hover::after {
+  opacity: 1;
+}
+
+/* ==========================================================================
    23. PRINT
    ========================================================================== */
 @media print {
