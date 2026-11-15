@@ -1,113 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenon Yuri Silva - Desenvolvedor Full Stack e Instrutor Técnico</title>
+    <title>Lenon Yuri Silva — Full Stack · IoT/Mecatrônica · IA · Instrutor Técnico</title>
     <meta name="description"
-        content="Portfólio profissional de Lenon Yuri Silva, especialista em desenvolvimento web e mobile com Java, Python, PHP e gestão de projetos ágeis.">
+        content="Portfólio profissional de Lenon Yuri Silva. Especialista em sistemas industriais (Indústria 4.0), Full Stack (Java, PHP, Python, JS), Automação (ESP32/Mecatrônica), Visão Computacional (YOLOv8) e Educação Tecnológica. Autor do SimuFab, Kamishibai, EnergizAR e Washing IA.">
+    <meta name="author" content="Lenon Yuri Silva">
+    <meta name="keywords"
+        content="Desenvolvedor Full Stack, IoT, Mecatrônica, ESP32, Indústria 4.0, YOLOv8, Visão Computacional, PHP, Java, Python, React, Instrutor Técnico, SENAI, Uberaba, MG">
 
-    <!-- Meta tags para SEO e compartilhamento otimizadas -->
-    <meta property="og:title" content="Lenon Yuri Silva - Desenvolvedor Full Stack">
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Lenon Yuri Silva — Full Stack · IoT · IA · Instrutor Técnico">
     <meta property="og:description"
-        content="Desenvolvedor Full Stack e Instrutor Técnico com expertise em diversas tecnologias e metodologias ágeis.">
+        content="Crio sistemas industriais, plataformas web e soluções de IA que resolvem problemas reais. Conheça o SimuFab, Kamishibai, EnergizAR e Washing IA.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seusite.com">
-    <meta property="og:image" content="https://seusite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://lyuri26.github.io/Curriculo/">
+    <meta property="og:image" content="https://lyuri26.github.io/Curriculo/og-image.jpg">
+    <meta property="og:image:alt" content="Portfólio de Lenon Yuri Silva">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Lenon Yuri Silva — Portfólio">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lenon Yuri Silva — Full Stack · IoT · IA">
+    <meta name="twitter:description" content="Sistemas industriais, plataformas web e IA aplicada. Portfólio completo.">
+    <meta name="twitter:image" content="https://lyuri26.github.io/Curriculo/og-image.jpg">
+
     <meta name="theme-color" content="#6a3093">
 
-    <!-- Favicon moderno com múltiplos tamanhos -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <!-- Pré-conexão para CDNs -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <!-- Pré-carregamento de recursos críticos -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Bootstrap 5.3 + Bootstrap Icons + Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Fallback para caso JavaScript esteja desabilitado -->
-    <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </noscript>
-
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar">
-    <!-- Navbar melhorada -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="90">
+    <!-- Barra de Progresso -->
+    <div id="scrollProgress" class="scroll-progress no-print" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVBAR
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark no-print">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="#" aria-label="Página inicial">
-                <span class="d-inline-block me-2">Lenon Yuri Silva</span>
-                <span class="badge bg-accent ms-2 d-none d-lg-inline">Disponível para oportunidades</span>
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#top" aria-label="Página inicial">
+                <span class="brand-dot me-2"></span>
+                <span>Lenon Yuri Silva</span>
+                <span class="badge bg-accent text-dark ms-2 d-none d-xl-inline">Disponível</span>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">
-                            <i class="bi bi-person-fill me-1" aria-hidden="true"></i>
-                            <span class="d-none d-md-inline">Sobre</span>
-                        </a>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#destaques"><i
+                                class="bi bi-stars me-1"></i>Destaques</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i
+                                class="bi bi-person-fill me-1"></i>Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><i
+                                class="bi bi-briefcase-fill me-1"></i>Experiência</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education"><i
+                                class="bi bi-book-fill me-1"></i>Formação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="bi bi-tools me-1"></i>Skills</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">
-                            <i class="bi bi-briefcase-fill me-1" aria-hidden="true"></i>
-                            <span class="d-none d-md-inline">Experiência</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">
-                            <i class="bi bi-book-fill me-1" aria-hidden="true"></i>
-                            <span class="d-none d-md-inline">Formação</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#publications">
-                            <i class="bi bi-journal-bookmark-fill me-1"></i>
-                            <span class="d-none d-md-inline">Publicações</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">
-                            <i class="bi bi-tools me-1" aria-hidden="true"></i>
-                            <span class="d-none d-md-inline">Habilidades</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">
-                            <i class="bi bi-code-square me-1" aria-hidden="true"></i>
-                            <span class="d-none d-md-inline">Projetos</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">
-                            <i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>
-                            <span class="d-none d-md-inline">Contato</span>
-                        </a>
-                    </li>
-                    <li class="nav-item ms-lg-2 d-flex align-items-center">
-                        <button id="themeToggle" class="btn btn-sm theme-toggle rounded-pill"
+                    <li class="nav-item"><a class="nav-link" href="#projects"><i
+                                class="bi bi-code-square me-1"></i>Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#github-radar"><i
+                                class="bi bi-github me-1"></i>GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i
+                                class="bi bi-envelope-fill me-1"></i>Contato</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0 d-flex gap-2">
+                        <button id="printResumeBtn" class="btn btn-sm btn-outline-light rounded-pill" type="button"
+                            title="Imprimir ou Salvar Currículo em PDF">
+                            <i class="bi bi-file-earmark-pdf-fill me-1"></i>PDF
+                        </button>
+                        <button id="themeToggle" class="btn btn-sm theme-toggle rounded-pill" type="button"
                             aria-label="Alternar modo escuro/claro">
-                            <i class="bi bi-moon-fill"></i>
-                            <span class="d-none d-lg-inline ms-1">Tema</span>
+                            <i class="bi bi-sun-fill"></i>
+                            <span class="ms-1">Tema</span>
                         </button>
                     </li>
                 </ul>
@@ -115,718 +106,867 @@
         </div>
     </nav>
 
-    <!-- Hero Section redesenhada -->
-    <header class="hero text-center py-5">
-        <div class="container py-5 position-relative">
-            <!-- Efeito de partículas (opcional) -->
-            <div class="particles" id="particles-js" aria-hidden="true"></div>
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO — Proposta de Valor
+         ═══════════════════════════════════════════════════════════════════ -->
+    <header id="top" class="hero d-flex align-items-center text-center">
+        <canvas id="heroCanvas" class="hero-canvas no-print" aria-hidden="true"></canvas>
+        <div class="container position-relative z-2 py-5">
+            <!-- Badge de disponibilidade com indicador verde -->
+            <div class="hero-badge-top mb-3 reveal-up">
+                <span class="d-inline-block me-2"
+                    style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; vertical-align: middle;"></span>
+                Disponível para novos projetos • Uberaba, MG
+            </div>
 
-            <div class="hero-content position-relative">
-                <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">Lenon Yuri Silva</h1>
-                <p class="lead mb-4 fs-4 animate__animated animate__fadeIn animate__delay-1s">
-                    <span class="typed"
-                        data-typed-items="Desenvolvedor Full Stack, Instrutor Técnico SENAI, Especialista em Java, Especialista em PHP"></span>
-                </p>
+            <h1 class="display-3 fw-extrabold mb-3 reveal-up">Lenon Yuri Silva</h1>
 
-                <div class="hero-badges mb-4 animate__animated animate__fadeIn animate__delay-2s">
-                    <div class="badge-cloud">
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-database me-1"></i> MySQL
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-java me-1"></i> Java
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-js me-1"></i> JavaScript
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-php me-1"></i> PHP
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-c me-1"></i> C
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-cpp me-1"></i> C++
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-py me-1"></i> Python
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-kanban me-1"></i> SCRUM
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-kanban me-1"></i> Trello
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-github me-1"></i> GitHub
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-rs me-1"></i> Rust
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-html me-1"></i> HTML
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-filetype-css me-1"></i> CSS
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-ubuntu me-1"></i> Ubuntu
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-terminal me-1"></i> Shell Script
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-react me-1"></i> React
-                        </span>
-                        <span class="badge bg-primary-soft me-2 mb-2">
-                            <i class="bi bi-laravel me-1"></i> Laravel
-                        </span>
+            <p class="hero-typing mb-3 reveal-up">
+                <span id="typedText" class="typed-output"></span><span class="typed-cursor">|</span>
+            </p>
+
+            <!-- Sub-headline de venda -->
+            <p class="lead text-white-50 mb-4 mx-auto reveal-up" style="max-width: 720px;">
+                Construo <strong class="text-white">sistemas industriais, plataformas web e soluções de IA</strong>
+                que resolvem problemas reais de indústria, educação e segurança.
+            </p>
+
+            <!-- Nuvem Completa de Tecnologias -->
+            <div class="badge-cloud mb-4 reveal-up">
+                <span class="tech-pill"><i class="fa-solid fa-database"></i> MySQL / MariaDB / MongoDB</span>
+                <span class="tech-pill"><i class="fa-brands fa-java"></i> Java / Spring Boot</span>
+                <span class="tech-pill"><i class="fa-brands fa-js"></i> JavaScript / React</span>
+                <span class="tech-pill"><i class="fa-brands fa-php"></i> PHP / Laravel</span>
+                <span class="tech-pill"><i class="fa-solid fa-c"></i> C / C++</span>
+                <span class="tech-pill"><i class="fa-brands fa-python"></i> Python / Django</span>
+                <span class="tech-pill"><i class="fa-solid fa-microchip"></i> ESP32 / Mecatrônica</span>
+                <span class="tech-pill"><i class="fa-solid fa-eye"></i> YOLOv8 / OpenCV / DeepFace</span>
+                <span class="tech-pill"><i class="fa-brands fa-html5"></i> HTML5 / CSS3 / Bootstrap</span>
+                <span class="tech-pill"><i class="fa-brands fa-docker"></i> Docker &amp; Git</span>
+                <span class="tech-pill"><i class="fa-solid fa-diagram-project"></i> SCRUM / Kanban</span>
+            </div>
+
+            <!-- CTAs principais (funil de conversão) -->
+            <div class="hero-cta d-flex flex-wrap justify-content-center gap-3 mb-5 reveal-up no-print">
+                <a href="#contact" class="btn btn-hero-primary btn-lg px-4">
+                    <i class="bi bi-chat-dots-fill me-2"></i>Vamos Conversar
+                </a>
+                <a href="#destaques" class="btn btn-hero-outline btn-lg px-4">
+                    <i class="bi bi-stars me-2"></i>Projetos em Destaque
+                </a>
+                <a href="#projects" class="btn btn-hero-outline btn-lg px-4">
+                    <i class="bi bi-code-square me-2"></i>Portfólio Completo
+                </a>
+            </div>
+
+            <!-- Métricas -->
+            <div class="row g-3 justify-content-center hero-stats reveal-up">
+                <div class="col-6 col-md-3">
+                    <div class="stat-glass">
+                        <span class="stat-number" id="statTotalRepos">40+</span>
+                        <span class="stat-label">Repositórios GitHub</span>
                     </div>
                 </div>
-                <div class="hero-cta animate__animated animate__fadeInUp animate__delay-3s">
-                    <a href="#contact" class="btn btn-primary btn-lg me-3">
-                        <i class="bi bi-envelope me-1"></i> Contato
-                    </a>
-                    <a href="#projects" class="btn btn-outline-light btn-lg">
-                        <i class="bi bi-code-square me-1"></i> Ver Projetos
-                    </a>
+                <div class="col-6 col-md-3">
+                    <div class="stat-glass">
+                        <span class="stat-number" id="statProjectsCatalog">18+</span>
+                        <span class="stat-label">Sistemas Entregues</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-glass">
+                        <span class="stat-number" id="statTotalStars">--</span>
+                        <span class="stat-label">Estrelas GitHub</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-glass">
+                        <span class="stat-number">8+ anos</span>
+                        <span class="stat-label">Carreira em TI</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Scroll indicator -->
-        <div class="scroll-indicator">
-            <a href="#about" class="scroll-down" aria-label="Role para baixo">
-                <i class="bi bi-chevron-down"></i>
-            </a>
-        </div>
+        <a href="#destaques" class="scroll-down no-print" aria-label="Role para baixo">
+            <i class="bi bi-chevron-down"></i>
+        </a>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
+    <!-- ═══════════════════════════════════════════════════════════════════
+         TRUST BAR — Instituições / Prova Social
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="py-4 no-print"
+        style="background: var(--bs-section-bg); border-bottom: 1px solid var(--bs-border-color);">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="mb-4">Sobre Mim</h2>
-                    <p class="lead">Profissional com dupla formação em <strong>Administração</strong> e <strong>Sistemas
-                            de Informação</strong>, combinando habilidades técnicas e gerenciais para desenvolver
-                        soluções inovadoras.</p>
-
-                    <div class="about-details mt-4">
-                        <div class="detail-item">
-                            <i class="bi bi-person-badge-fill me-2" aria-hidden="true"></i>
-                            <span><strong>Idade:</strong> 28 anos</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>
-                            <span><strong>Localização:</strong> Uberaba, MG</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="bi bi-mortarboard-fill me-2" aria-hidden="true"></i>
-                            <span><strong>Formação:</strong> Bacharel em Administração e Sistemas de Informação</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="bi bi-briefcase-fill me-2" aria-hidden="true"></i>
-                            <span><strong>Experiência:</strong> 5+ anos na área de TI</span>
-                        </div>
-                    </div>
-
-                    <h3 class="mt-5 mb-3">Objetivo Profissional</h3>
-                    <div class="professional-goal">
-                        <p>Como <strong>Desenvolvedor Full Stack</strong> e <strong>Instrutor Técnico</strong>, busco
-                            oportunidades para:</p>
-
-                        <ul class="goal-highlights">
-                            <li><i class="bi bi-code-square"></i> Desenvolver soluções inovadoras que resolvam problemas
-                                reais</li>
-                            <li><i class="bi bi-people-fill"></i> Contribuir com minha experiência em ensino para
-                                capacitar equipes</li>
-                            <li><i class="bi bi-lightbulb"></i> Participar de projetos desafiadores que utilizem
-                                tecnologias emergentes</li>
-                            <li><i class="bi bi-arrow-repeat"></i> Aplicar metodologias ágeis para entregas de qualidade
-                            </li>
-                        </ul>
-
-                        <p>Tenho especial interesse em ambientes que valorizem:</p>
-
-                        <div class="badges-container mb-3">
-                            <span class="badge"><i class="bi bi-git"></i> Boas práticas de desenvolvimento</span>
-                            <span class="badge"><i class="bi bi-kanban"></i> Trabalho colaborativo</span>
-                            <span class="badge"><i class="bi bi-graph-up"></i> Aprendizado contínuo</span>
-                        </div>
-
-                        <blockquote class="goal-quote">
-                            <p class="mb-0">"Acredito que a tecnologia deve ser acessível e transformadora, combinando
-                                excelência técnica com impacto social."</p>
-                        </blockquote>
-                    </div>
+            <div class="text-center mb-3">
+                <small class="text-muted text-uppercase fw-semibold" style="letter-spacing: 1.5px; font-size: 0.7rem;">
+                    Experiência profissional &amp; projetos em parceria com
+                </small>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 gap-md-5 opacity-75">
+                <div class="text-center" title="Instrutor de Desenvolvimento de Sistemas">
+                    <i class="bi bi-mortarboard-fill fs-3 text-muted"></i>
+                    <div class="small text-muted mt-1">SENAI / FIEMG</div>
                 </div>
-                <div class="col-lg-6 mt-5 mt-lg-0">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Principais Competências</h4>
-                            <ul class="competence-list">
-                                <li>
-                                    <i class="bi bi-check-circle-fill"></i>
-                                    <span>Desenvolvimento de sistemas educacionais</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-check-circle-fill"></i>
-                                    <span>Instrução técnica em programação</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-check-circle-fill"></i>
-                                    <span>Gestão de projetos ágeis</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-check-circle-fill"></i>
-                                    <span>Análise e automação de processos</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-check-circle-fill"></i>
-                                    <span>Desenvolvimento full stack</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-check-circle-fill"></i>
-                                    <span>Integração de sistemas</span>
-                                </li>
-                            </ul>
+                <div class="text-center" title="Bacharelado em Administração">
+                    <i class="bi bi-bank2 fs-3 text-muted"></i>
+                    <div class="small text-muted mt-1">IFMG</div>
+                </div>
+                <div class="text-center" title="Licenciatura em Computação">
+                    <i class="bi bi-book-fill fs-3 text-muted"></i>
+                    <div class="small text-muted mt-1">IFTM</div>
+                </div>
+                <div class="text-center" title="Analista de Desenvolvimento">
+                    <i class="bi bi-building-fill fs-3 text-muted"></i>
+                    <div class="small text-muted mt-1">BDMG</div>
+                </div>
+                <div class="text-center" title="Assistente Administrativo">
+                    <i class="bi bi-droplet-fill fs-3 text-muted"></i>
+                    <div class="small text-muted mt-1">COPASA</div>
+                </div>
+                <div class="text-center" title="Sistemas Hospitalares">
+                    <i class="bi bi-hospital-fill fs-3 text-muted"></i>
+                    <div class="small text-muted mt-1">FUNDEP / HRTN</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <h5 class="mt-4 mb-3">Certificações</h5>
-                            <div class="certifications">
-                                <span class="badge me-2 mb-2">HTML/CSS3 - Estácio</span>
-                                <span class="badge me-2 mb-2">Lógica de Programação</span>
-                                <span class="badge me-2 mb-2">Processos Administrativos - SENAI</span>
-                                <span class="badge me-2 mb-2">Sei Planejar - SEBRAE</span>
-                                <span class="badge me-2 mb-2">Inglês - Open English</span>
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NOVO — PROJETOS EM DESTAQUE (Case Studies)
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="destaques" class="py-section">
+        <div class="container">
+            <div class="section-heading text-center mb-5 reveal-up">
+                <span class="section-eyebrow">Portfólio em Destaque</span>
+                <h2>Projetos que Geram Resultado</h2>
+                <p class="text-muted mx-auto max-w-650">
+                    Quatro soluções entregues que combinam <strong>engenharia de software, hardware e IA</strong>
+                    para resolver problemas reais de indústria, educação e segurança.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- ═══════════ 1. SIMUFAB ═══════════ -->
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-web"
+                            style="height: 150px; flex-direction: column; gap: .35rem; padding: 1rem;">
+                            <span class="project-year">2025–2026</span>
+                            <span class="project-tag-top">Enterprise • PCP</span>
+                            <i class="bi bi-buildings-fill"
+                                style="font-size: 2.6rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,.3));"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-accent text-dark mb-2">🏆 Projeto Principal</span>
+                            <h3 class="h4 mb-2">SimuFab — Simulador Industrial Multiplayer</h3>
+                            <p class="small text-accent fw-semibold mb-3">
+                                <i class="bi bi-box-seam me-1"></i>PCP, Supply Chain &amp; MES em plataforma 100% Web
+                            </p>
+                            <p class="small text-muted">
+                                Reproduz o dia a dia de uma indústria em <strong>4 etapas de roteiro</strong>, com
+                                <strong>leilões B2B</strong>, <strong>8 cargos corporativos</strong> e <strong>7 motores
+                                    de IA</strong> para feedback em tempo real. Usado em formação técnica e simulados de
+                                gestão industrial.
+                            </p>
+                            <!-- Impacto -->
+                            <div class="row g-2 my-3">
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">46</div>
+                                    <small class="text-muted">tabelas</small>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">8</div>
+                                    <small class="text-muted">cargos</small>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">7</div>
+                                    <small class="text-muted">motores IA</small>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">PHP 8 MVC</span>
+                                <span class="mini-tag">MySQL 8</span>
+                                <span class="mini-tag">Chart.js</span>
+                                <span class="mini-tag">Altman Z-Score</span>
+                                <span class="mini-tag">API Banco Central</span>
+                            </div>
+                            <div
+                                class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top border-subtle">
+                                <span class="small text-muted"><i class="bi bi-lock-fill me-1"></i>Código
+                                    proprietário</span>
+                                <a href="#contact" class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-calendar-check me-1"></i>Agendar Demo
+                                </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- ═══════════ 2. ENERGIZAR (Compressor) ═══════════ -->
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-iot"
+                            style="height: 150px; flex-direction: column; gap: .35rem; padding: 1rem;">
+                            <span class="project-year">2023–2026</span>
+                            <span class="project-tag-top">Indústria 4.0</span>
+                            <i class="bi bi-lightning-charge-fill"
+                                style="font-size: 2.6rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,.3));"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-accent text-dark mb-2">⚡ IoT Industrial</span>
+                            <h3 class="h4 mb-2">EnergizAR — Compressores Industriais</h3>
+                            <p class="small text-accent fw-semibold mb-3">
+                                <i class="bi bi-cpu me-1"></i>Supervisório ESP32 com IA Local Adaptativa
+                            </p>
+                            <p class="small text-muted">
+                                Supervisório industrial de compressores com <strong>pulsos não-bloqueantes de 500
+                                    ms</strong>, proteção térmica/pressostato, timers anti-curto-ciclo persistentes,
+                                <strong>OTA Web</strong> sem cabo, autenticação SHA-256 e <strong>IA Local (Welford +
+                                    Z-Score)</strong> embarcada.
+                            </p>
+                            <div class="row g-2 my-3">
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">500<span style="font-size:.7rem;">ms</span>
+                                    </div>
+                                    <small class="text-muted">pulsos</small>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">SHA-256</div>
+                                    <small class="text-muted">auth</small>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">Edge</div>
+                                    <small class="text-muted">IA local</small>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">ESP32</span>
+                                <span class="mini-tag">C++</span>
+                                <span class="mini-tag">Welford</span>
+                                <span class="mini-tag">Web OTA</span>
+                                <span class="mini-tag">SHA-256</span>
+                            </div>
+                            <div
+                                class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top border-subtle">
+                                <a href="https://github.com/LYuri26/CompressorWeb" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-github me-1"></i>Ver Código
+                                </a>
+                                <span class="small text-muted">Trilhas de Futuro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════════ 3. KAMISHIBAI ═══════════ -->
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-edu"
+                            style="height: 150px; flex-direction: column; gap: .35rem; padding: 1rem;">
+                            <span class="project-year">2024–2026</span>
+                            <span class="project-tag-top">Auditoria &amp; Digital Signage</span>
+                            <i class="bi bi-clipboard2-pulse-fill"
+                                style="font-size: 2.6rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,.3));"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-accent text-dark mb-2">📊 Gestão &amp; Data</span>
+                            <h3 class="h4 mb-2">Kamishibai Senai &amp; Mural Digital Vagas</h3>
+                            <p class="small text-accent fw-semibold mb-3">
+                                <i class="bi bi-graph-up-arrow me-1"></i>Auditoria preditiva + Digital Signage 24/7
+                            </p>
+                            <p class="small text-muted">
+                                <strong>Kamishibai:</strong> auditoria de ambientes com análise preditiva
+                                <strong>Holt-Winters</strong>. <strong>Mural Digital:</strong> Digital Signage 24/7 para
+                                TVs e Raspberry Pi com upload até <strong>500 MB</strong> e feed automático de notícias.
+                            </p>
+                            <div class="row g-2 my-3">
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">24/7</div>
+                                    <small class="text-muted">signage</small>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">500<span style="font-size:.7rem;">MB</span>
+                                    </div>
+                                    <small class="text-muted">upload</small>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">Holt</div>
+                                    <small class="text-muted">preditivo</small>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">PHP 8</span>
+                                <span class="mini-tag">MySQL</span>
+                                <span class="mini-tag">Holt-Winters</span>
+                                <span class="mini-tag">Raspberry Pi</span>
+                            </div>
+                            <div
+                                class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top border-subtle">
+                                <a href="https://github.com/LYuri26/ProjetoVagasSenai" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-github me-1"></i>Ver Projeto
+                                </a>
+                                <span class="small text-muted">SENAI Uberaba</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════════ 4. WASHING IA ═══════════ -->
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-ia"
+                            style="height: 150px; flex-direction: column; gap: .35rem; padding: 1rem;">
+                            <span class="project-year">2024–2026</span>
+                            <span class="project-tag-top">Visão Computacional</span>
+                            <i class="bi bi-camera-video-fill"
+                                style="font-size: 2.6rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,.3));"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-accent text-dark mb-2">🤖 IA + Edge</span>
+                            <h3 class="h4 mb-2">Washing Logística IA &amp; HiloVigia</h3>
+                            <p class="small text-accent fw-semibold mb-3">
+                                <i class="bi bi-eye-fill me-1"></i>Inspeção YOLOv8 + Segurança de cargas ESP32
+                            </p>
+                            <p class="small text-muted">
+                                <strong>Washing IA:</strong> inspeção automatizada de Big Bags com <strong>YOLOv8 + OCR
+                                    + active learning</strong> em RTX 3060/3050. <strong>HiloVigia:</strong> sistema de
+                                segurança de movimentação de cargas integrado a semáforo <strong>ESP32</strong> para
+                                operação industrial.
+                            </p>
+                            <div class="row g-2 my-3">
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">YOLOv8</div>
+                                    <small class="text-muted">detecção</small>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">OCR</div>
+                                    <small class="text-muted">leitura</small>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="h5 mb-0 text-accent fw-bold">Edge</div>
+                                    <small class="text-muted">ESP32</small>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">Python</span>
+                                <span class="mini-tag">YOLOv8</span>
+                                <span class="mini-tag">OpenCV</span>
+                                <span class="mini-tag">ESP32</span>
+                                <span class="mini-tag">Active Learning</span>
+                            </div>
+                            <div
+                                class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top border-subtle">
+                                <span class="small text-muted"><i class="bi bi-lock-fill me-1"></i>Código
+                                    enterprise</span>
+                                <a href="#contact" class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-chat-dots me-1"></i>Saber Mais
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA de fechamento -->
+            <div class="text-center mt-5 reveal-up">
+                <a href="#projects" class="btn btn-hero-primary btn-lg px-4">
+                    <i class="bi bi-grid-3x3-gap-fill me-2"></i>Ver Portfólio Completo (12+ projetos)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         ABOUT
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="about" class="py-section section-alt">
+        <div class="container">
+            <div class="section-heading text-center mb-5 reveal-up">
+                <span class="section-eyebrow">Perfil Profissional</span>
+                <h2>Sobre Mim</h2>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card h-100 p-4">
+                        <p class="lead mb-4">
+                            Profissional com formação multidisciplinar em <strong>Administração</strong> e
+                            <strong>Sistemas de Informação</strong>, cursando <strong>Licenciatura em
+                                Computação</strong>
+                            e <strong>Técnico em Mecatrônica</strong>, combinando habilidades técnicas em software,
+                            hardware/IoT e gestão para criar soluções eficientes.
+                        </p>
+
+                        <div class="about-grid mb-4">
+                            <div class="about-item">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <div><small>Localização</small><strong>Centro, Uberaba - MG</strong></div>
+                            </div>
+                            <div class="about-item">
+                                <i class="bi bi-mortarboard-fill"></i>
+                                <div><small>Formação</small><strong>Adm. • SI • Computação • Mecatrônica</strong></div>
+                            </div>
+                            <div class="about-item">
+                                <i class="bi bi-briefcase-fill"></i>
+                                <div><small>Experiência</small><strong>6+ anos em TI (desde 2018)</strong></div>
+                            </div>
+                            <div class="about-item">
+                                <i class="bi bi-cpu-fill"></i>
+                                <div><small>Atuação</small><strong>Full Stack, IoT/ESP32, IA &amp; Docência</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="h5 mb-3">Objetivo Profissional</h3>
+                        <div class="professional-goal">
+                            <p class="small mb-2">Como <strong>Desenvolvedor Full Stack</strong> e <strong>Instrutor
+                                    Técnico</strong>, busco oportunidades para:</p>
+                            <ul class="goal-highlights">
+                                <li><i class="bi bi-code-square"></i> Desenvolver soluções inovadoras que resolvam
+                                    problemas reais</li>
+                                <li><i class="bi bi-people-fill"></i> Contribuir com minha experiência em ensino para
+                                    capacitar equipes</li>
+                                <li><i class="bi bi-lightbulb"></i> Participar de projetos desafiadores com tecnologias
+                                    emergentes (IA, IoT, Automação)</li>
+                                <li><i class="bi bi-arrow-repeat"></i> Aplicar metodologias ágeis para entregas de
+                                    qualidade</li>
+                            </ul>
+
+                            <p class="small mb-2">Tenho especial interesse em ambientes que valorizem:</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="mini-tag"><i class="bi bi-git me-1"></i>Boas práticas de
+                                    desenvolvimento</span>
+                                <span class="mini-tag"><i class="bi bi-kanban me-1"></i>Trabalho colaborativo</span>
+                                <span class="mini-tag"><i class="bi bi-graph-up me-1"></i>Aprendizado contínuo</span>
+                            </div>
+
+                            <blockquote class="goal-quote mb-0">
+                                "Acredito que a tecnologia deve ser acessível e transformadora, combinando excelência
+                                técnica com impacto social."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card h-100 p-4 d-flex flex-column">
+                        <h4 class="mb-3"><i class="bi bi-patch-check-fill text-accent me-2"></i>Principais Competências
+                        </h4>
+                        <ul class="competence-list mb-4">
+                            <li><i class="bi bi-check-circle-fill"></i><span>Desenvolvimento de sistemas educacionais e
+                                    simuladores industriais</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Instrução técnica em programação, redes,
+                                    IoT e projetos integradores</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Gestão de projetos ágeis (Scrum, Kanban,
+                                    Trello)</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Análise, modelagem de dados e automação de
+                                    processos</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Desenvolvimento Full Stack (Java, PHP,
+                                    Python, JS/React)</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Integração de sistemas, automação
+                                    mecatrônica, ESP32 e Visão Computacional</span></li>
+                        </ul>
+
+                        <h5 class="mb-3 mt-auto">Certificações</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="cert-pill">HTML/CSS3 — Estácio</span>
+                            <span class="cert-pill">Lógica de Programação</span>
+                            <span class="cert-pill">Processos Administrativos — SENAI</span>
+                            <span class="cert-pill">Sei Planejar — SEBRAE</span>
+                            <span class="cert-pill">Inglês — Open English</span>
+                        </div>
+
+                        <a href="#contact" class="btn btn-hero-primary mt-2">
+                            <i class="bi bi-send-fill me-2"></i>Falar comigo
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-5 section-bg experience-section">
+    <!-- ═══════════════════════════════════════════════════════════════════
+         EXPERIENCE
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="experience" class="py-section">
         <div class="container">
-            <h2 class="text-center mb-5 section-title">Trajetória Profissional</h2>
+            <div class="section-heading text-center mb-5 reveal-up">
+                <span class="section-eyebrow">Carreira</span>
+                <h2>Trajetória Profissional</h2>
+            </div>
 
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <div class="timeline">
                         <!-- SENAI -->
-                        <div class="timeline-item">
-                            <div class="timeline-badge">
-                                <i class="bi bi-mortarboard" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-header">
-                                    <h3>Instrutor de Desenvolvimento de Sistemas</h3>
-                                    <h4>SENAI Minas Gerais | Out 2022 - Atual</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Ministro capacitação técnica em programação para formação de desenvolvedores,
-                                        alinhando o ensino às demandas do mercado de tecnologia.</p>
-
-                                    <h5>Principais Atribuições:</h5>
-                                    <ul>
-                                        <li>Lecionar disciplinas de programação (Java, Python, JavaScript, PHP) e
-                                            tecnologias web (HTML/CSS, React.js)</li>
-                                        <li>Desenvolver currículos e materiais didáticos com projetos práticos</li>
-                                        <li>Implementar metodologias ativas de aprendizagem baseadas em problemas reais
-                                        </li>
-                                        <li>Orientar alunos no desenvolvimento de projetos finais com aplicação
-                                            industrial</li>
-                                        <li>Monitorar desempenho e adaptar abordagens pedagógicas</li>
-                                    </ul>
-
-                                    <h5>Destaques e Contribuições:</h5>
-                                    <ul>
-                                        <li>Modernização curricular com inclusão de Git, metodologias ágeis e boas
-                                            práticas</li>
-                                        <li>Criação de laboratórios práticos simulando ambientes de desenvolvimento
-                                            reais</li>
-                                        <li>Desenvolvimento de sistema didático de gestão escolar com componentes de IA
-                                        </li>
-                                        <li>Parcerias com empresas para projetos baseados em desafios reais do setor
-                                        </li>
-                                    </ul>
-
-                                    <div class="technologies mt-4">
-                                        <span class="badge"><i class="bi bi-filetype-java"></i> Java</span>
-                                        <span class="badge"><i class="bi bi-filetype-py"></i> Python</span>
-                                        <span class="badge"><i class="bi bi-filetype-php"></i> PHP</span>
-                                        <span class="badge"><i class="bi bi-database"></i> MySQL</span>
-                                        <span class="badge"><i class="bi bi-filetype-html"></i> HTML/CSS</span>
-                                        <span class="badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
-                                        <span class="badge"><i class="bi bi-kanban"></i> SCRUM</span>
+                        <div class="timeline-item reveal-up">
+                            <div class="timeline-badge"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="timeline-content modern-card">
+                                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                                    <div>
+                                        <h3 class="h5 mb-1">Instrutor de Desenvolvimento de Sistemas / Informática</h3>
+                                        <div class="text-accent fw-semibold">SENAI Minas Gerais</div>
                                     </div>
+                                    <span class="period-pill">Out 2022 – Atual</span>
+                                </div>
+                                <p>Ministro capacitação técnica em programação para formação de desenvolvedores,
+                                    alinhando o ensino às demandas reais da indústria e do mercado de tecnologia.</p>
+
+                                <h6 class="text-accent mt-3">Principais Atribuições:</h6>
+                                <ul>
+                                    <li>Lecionar disciplinas de programação (Java, Python, JavaScript, PHP, C/C++) e
+                                        tecnologias web (HTML/CSS, React.js, MySQL)</li>
+                                    <li>Desenvolver currículos, apostilas e materiais didáticos com projetos práticos
+                                    </li>
+                                    <li>Implementar metodologias ativas de aprendizagem baseadas em problemas reais</li>
+                                    <li>Orientar alunos no desenvolvimento de projetos finais com aplicação industrial
+                                        (IoT/ESP32, IA, Web)</li>
+                                    <li>Monitorar desempenho e adaptar abordagens pedagógicas</li>
+                                </ul>
+
+                                <h6 class="text-accent mt-3">Destaques e Contribuições:</h6>
+                                <ul>
+                                    <li>Modernização curricular com inclusão de Git, Scrum e boas práticas de engenharia
+                                    </li>
+                                    <li>Criação de laboratórios práticos simulando ambientes de desenvolvimento reais
+                                    </li>
+                                    <li>Desenvolvimento de sistemas didáticos de gestão escolar, mural digital, PCP
+                                        (SimuFab) e IA (Fidélis 4.0)</li>
+                                    <li>Parcerias e projetos baseados em desafios reais do setor industrial (EnergizAR,
+                                        Kamishibai)</li>
+                                </ul>
+
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="mini-tag">Java</span><span class="mini-tag">Python</span><span
+                                        class="mini-tag">PHP</span>
+                                    <span class="mini-tag">MySQL</span><span class="mini-tag">HTML/CSS/JS</span><span
+                                        class="mini-tag">React.js</span>
+                                    <span class="mini-tag">ESP32 / C++</span><span class="mini-tag">Git &amp;
+                                        SCRUM</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- BDMG -->
-                        <div class="timeline-item">
-                            <div class="timeline-badge">
-                                <i class="bi bi-bank2" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-header">
-                                    <h3>Analista de Desenvolvimento</h3>
-                                    <h4>Banco de Desenvolvimento de Minas Gerais | Mar 2021 - Out 2022</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Atuei no suporte técnico especializado e desenvolvimento de soluções para
-                                        operações de crédito e fomento empresarial.</p>
-
-                                    <h5>Principais Atribuições:</h5>
-                                    <ul>
-                                        <li>Suporte técnico avançado para correspondentes bancários</li>
-                                        <li>Análise e solução de problemas em operações de financiamento</li>
-                                        <li>Mediação técnica entre áreas comerciais e usuários finais</li>
-                                    </ul>
-
-                                    <h5>Destaques:</h5>
-                                    <ul>
-                                        <li>Padronização de procedimentos técnicos para correspondentes bancários</li>
-                                    </ul>
-
-                                    <div class="technologies mt-4">
-                                        <span class="badge"><i class="bi bi-cash-stack"></i> Processos Bancários</span>
+                        <div class="timeline-item reveal-up">
+                            <div class="timeline-badge"><i class="bi bi-bank2"></i></div>
+                            <div class="timeline-content modern-card">
+                                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                                    <div>
+                                        <h3 class="h5 mb-1">Analista de Desenvolvimento</h3>
+                                        <div class="text-accent fw-semibold">Banco de Desenvolvimento de Minas Gerais
+                                            (BDMG)</div>
                                     </div>
+                                    <span class="period-pill">Mar 2021 – Out 2022</span>
+                                </div>
+                                <p>Atuei no suporte técnico especializado e análise de fluxos para operações de crédito
+                                    e fomento empresarial.</p>
+                                <h6 class="text-accent mt-3">Principais Atribuições e Destaques:</h6>
+                                <ul>
+                                    <li>Suporte técnico avançado e estratégico para correspondentes bancários pelos
+                                        canais oficiais</li>
+                                    <li>Análise e solução de problemas em operações de financiamento, assegurando
+                                        eficiência operacional</li>
+                                    <li>Mediação técnica entre áreas comerciais e usuários finais</li>
+                                    <li>Padronização de procedimentos técnicos para correspondentes bancários</li>
+                                </ul>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="mini-tag">Processos Bancários</span><span class="mini-tag">Suporte
+                                        Estratégico</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- IGTI -->
-                        <div class="timeline-item">
-                            <div class="timeline-badge">
-                                <i class="bi bi-people" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-header">
-                                    <h3>Monitor de Turmas em Tecnologia</h3>
-                                    <h4>IGTI | Nov 2020 - Fev 2021</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Atuei como facilitador de aprendizagem em bootcamps de programação, auxiliando na
-                                        jornada educacional de estudantes.</p>
-
-                                    <h5>Principais Atribuições:</h5>
-                                    <ul>
-                                        <li>Acompanhamento pedagógico de turmas em cursos intensivos de tecnologia</li>
-                                        <li>Mediação de fóruns de discussão e suporte técnico aos alunos</li>
-                                        <li>Monitoramento de progresso e identificação de dificuldades de aprendizagem
-                                        </li>
-                                        <li>Produção de relatórios analíticos sobre desempenho das turmas</li>
-                                        <li>Facilitação da comunicação entre alunos, professores e coordenação</li>
-                                    </ul>
-
-                                    <h5>Destaques:</h5>
-                                    <ul>
-                                        <li>Desenvolvimento de sistema de mala direta para emails</li>
-                                        <li>Acompanhamento individualizado</li>
-                                    </ul>
-
-                                    <div class="technologies mt-4">
-                                        <span class="badge"><i class="bi bi-journal-bookmark"></i> Gestão
-                                            Educacional</span>
-                                        <span class="badge"><i class="bi bi-laptop"></i> EAD</span>
-                                        <span class="badge"><i class="bi bi-chat-left-text"></i> Mediação
-                                            Pedagógica</span>
+                        <!-- IGTI / XP -->
+                        <div class="timeline-item reveal-up">
+                            <div class="timeline-badge"><i class="bi bi-people-fill"></i></div>
+                            <div class="timeline-content modern-card">
+                                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                                    <div>
+                                        <h3 class="h5 mb-1">Monitor / Gestão de Turmas em Tecnologia</h3>
+                                        <div class="text-accent fw-semibold">IGTI / XP Educação</div>
                                     </div>
+                                    <span class="period-pill">Nov 2020 – Fev 2021</span>
+                                </div>
+                                <p>Atuei como facilitador de aprendizagem em bootcamps e pós-graduações online de
+                                    programação.</p>
+                                <h6 class="text-accent mt-3">Principais Atribuições e Destaques:</h6>
+                                <ul>
+                                    <li>Acompanhamento pedagógico de turmas online e mediação de fóruns interativos</li>
+                                    <li>Monitoramento de progresso, identificação de dificuldades e acompanhamento
+                                        individualizado</li>
+                                    <li>Produção de relatórios analíticos de desempenho e mediação entre alunos,
+                                        professores e coordenação</li>
+                                    <li>Desenvolvimento de sistema automatizado de mala direta para e-mails</li>
+                                </ul>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="mini-tag">Gestão Educacional</span><span
+                                        class="mini-tag">EAD</span><span class="mini-tag">Mediação Pedagógica</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- FUNDEP/HRTN -->
-                        <div class="timeline-item">
-                            <div class="timeline-badge">
-                                <i class="bi bi-clipboard2-pulse" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-header">
-                                    <h3>Desenvolvedor de Sistemas Hospitalares</h3>
-                                    <h4>FUNDEP/HRTN | Jul 2020 - Dez 2020</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Participei do desenvolvimento e manutenção de sistemas de informação hospitalar,
-                                        com foco em formulários médicos eletrônicos.</p>
-
-                                    <h5>Principais Atribuições:</h5>
-                                    <ul>
-                                        <li>Desenvolvimento de formulários médicos no sistema MV SOUL</li>
-                                        <li>Implementação de regras de negócio e fluxos de trabalho em SQL</li>
-                                        <li>Testes de usabilidade em colaboração com a equipe médica</li>
-                                        <li>Documentação técnica de processos e sistemas</li>
-                                        <li>Suporte aos usuários e treinamento básico do sistema</li>
-                                    </ul>
-
-                                    <h5>Destaques:</h5>
-                                    <ul>
-                                        <li>Modernização de formulários de prontuário eletrônico</li>
-                                        <li>Otimização de fluxos de trabalho para equipe médica</li>
-                                    </ul>
-
-                                    <div class="technologies mt-4">
-                                        <span class="badge"><i class="bi bi-clipboard2-pulse"></i> MV SOUL</span>
-                                        <span class="badge"><i class="bi bi-database"></i> SQL</span>
-                                        <span class="badge"><i class="bi bi-hospital"></i> Sistemas Hospitalares</span>
+                        <!-- FUNDEP / HRTN -->
+                        <div class="timeline-item reveal-up">
+                            <div class="timeline-badge"><i class="bi bi-clipboard2-pulse-fill"></i></div>
+                            <div class="timeline-content modern-card">
+                                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                                    <div>
+                                        <h3 class="h5 mb-1">Desenvolvedor de Sistemas Hospitalares (Estagiário em TI)
+                                        </h3>
+                                        <div class="text-accent fw-semibold">FUNDEP / Hospital Risoleta Tolentino Neves
+                                            (HRTN)</div>
                                     </div>
+                                    <span class="period-pill">Jul 2020 – Dez 2020</span>
+                                </div>
+                                <p>Desenvolvimento e manutenção de sistemas de informação hospitalar com foco em
+                                    formulários médicos eletrônicos.</p>
+                                <h6 class="text-accent mt-3">Principais Atribuições e Destaques:</h6>
+                                <ul>
+                                    <li>Desenvolvimento e modernização de formulários médicos no sistema <strong>MV
+                                            SOUL</strong></li>
+                                    <li>Implementação de regras de negócio e lógica de programação em
+                                        <strong>SQL</strong>
+                                    </li>
+                                    <li>Testes de usabilidade em colaboração com a equipe médica e otimização de fluxos
+                                        clínicos</li>
+                                    <li>Documentação técnica, suporte aos usuários e treinamento básico do sistema</li>
+                                </ul>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="mini-tag">MV SOUL</span><span class="mini-tag">SQL</span><span
+                                        class="mini-tag">Sistemas Hospitalares</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- COPASA -->
-                        <div class="timeline-item">
-                            <div class="timeline-badge">
-                                <i class="bi bi-files" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-header">
-                                    <h3>Assistente Administrativo</h3>
-                                    <h4>COPASA | Ago 2018 - Jul 2020</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Atuei na gestão documental e processos administrativos, desenvolvendo
-                                        competências em organização e atendimento ao cliente.</p>
-
-                                    <h5>Principais Atribuições:</h5>
-                                    <ul>
-                                        <li>Gestão de documentos e arquivos físicos e digitais</li>
-                                        <li>Atendimento ao cliente interno e externo</li>
-                                        <li>Controle de processos de cadastro e ordens de serviço</li>
-                                        <li>Organização e manutenção de sistemas de arquivamento</li>
-                                        <li>Apoio na elaboração de relatórios e planilhas gerenciais</li>
-                                    </ul>
-
-                                    <h5>Destaques:</h5>
-                                    <ul>
-                                        <li>Implantação de sistema de classificação documental</li>
-                                        <li>Otimização de fluxos de trabalho administrativos</li>
-                                    </ul>
-
-                                    <div class="technologies mt-4">
-                                        <span class="badge"><i class="bi bi-folder"></i> Gestão Documental</span>
-                                        <span class="badge"><i class="bi bi-person-lines-fill"></i> Atendimento</span>
-                                        <span class="badge"><i class="bi bi-diagram-3"></i> Processos
-                                            Administrativos</span>
+                        <div class="timeline-item reveal-up">
+                            <div class="timeline-badge"><i class="bi bi-files"></i></div>
+                            <div class="timeline-content modern-card">
+                                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                                    <div>
+                                        <h3 class="h5 mb-1">Assistente Administrativo</h3>
+                                        <div class="text-accent fw-semibold">COPASA</div>
                                     </div>
+                                    <span class="period-pill">Ago 2018 – Jul 2020</span>
+                                </div>
+                                <p>Gestão documental e processos administrativos com foco em organização e atendimento
+                                    ao cliente.</p>
+                                <h6 class="text-accent mt-3">Principais Atribuições e Destaques:</h6>
+                                <ul>
+                                    <li>Recebimento, triagem e gestão de documentos físicos e digitais (implantação de
+                                        classificação documental)</li>
+                                    <li>Atendimento ao cliente interno e externo e controle de cartas</li>
+                                    <li>Processos de cadastro, cancelamento e controle de ordens de serviço</li>
+                                    <li>Elaboração de relatórios e planilhas gerenciais e otimização de fluxos
+                                        administrativos</li>
+                                </ul>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="mini-tag">Gestão Documental</span><span
+                                        class="mini-tag">Atendimento</span><span class="mini-tag">Processos
+                                        Administrativos</span>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="text-center mt-4 reveal-up">
+                        <a href="#contact" class="btn btn-hero-primary">
+                            <i class="bi bi-download me-2"></i>Solicitar Currículo Completo
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Education Section -->
-    <section id="education" class="py-5 section-bg">
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         EDUCATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="education" class="py-section section-alt">
         <div class="container">
-            <div class="section-title">
+            <div class="section-heading text-center mb-5 reveal-up">
+                <span class="section-eyebrow">Acadêmico &amp; Técnico</span>
                 <h2>Formação Acadêmica</h2>
-                <p class="lead text-muted">Minha jornada de aprendizado e desenvolvimento contínuo</p>
+                <p class="text-muted mx-auto max-w-650">Jornada contínua unindo Gestão, Computação, Educação e Automação
+                    Industrial</p>
             </div>
 
             <div class="row g-4">
-                <!-- IFTM - Licenciatura em Computação -->
-                <div class="col-lg-6">
-                    <div class="education-card card h-100 shadow-lg">
-                        <div class="card-header bg-gradient-primary">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h3 class="mb-0">Licenciatura em Computação</h3>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <i class="fas fa-university me-2"></i>
-                                        <span>Instituto Federal do Triângulo Mineiro (IFTM)</span>
-                                    </div>
-                                </div>
-                                <div class="education-period badge bg-white text-primary">
-                                    <i class="far fa-calendar-alt me-1"></i> Ago 2025 - Presente
-                                </div>
+                <!-- Técnico em Mecatrônica -->
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card h-100 overflow-hidden edu-card">
+                        <div class="edu-header bg-gradient-iot">
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Técnico em Mecatrônica</h3>
+                                <div class="small text-white-50"><i class="fa-solid fa-industry me-1"></i>SENAI Minas
+                                    Gerais</div>
+                            </div>
+                            <span class="badge bg-light text-dark">Em andamento</span>
+                        </div>
+                        <div class="p-4">
+                            <h6 class="text-accent"><i class="fa-solid fa-gears me-2"></i>Competências &amp; Integração
+                                Hardware/Software</h6>
+                            <ul class="edu-list mb-3">
+                                <li><i class="fa-solid fa-chevron-right"></i>Automação industrial, sensores, atuadores e
+                                    sistemas eletroeletrônicos</li>
+                                <li><i class="fa-solid fa-chevron-right"></i>Programação de controladores (CLP) e
+                                    sistemas embarcados (ESP32)</li>
+                                <li><i class="fa-solid fa-chevron-right"></i>Acionamentos elétricos, pneumática,
+                                    eletropneumática e manutenção</li>
+                                <li><i class="fa-solid fa-chevron-right"></i>Integração direta com projetos IIoT,
+                                    robótica e Indústria 4.0</li>
+                            </ul>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="mini-tag">Automação Industrial</span>
+                                <span class="mini-tag">Eletrônica &amp; CLP</span>
+                                <span class="mini-tag">Indústria 4.0</span>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="education-highlights">
-                                <h5 class="text-primary"><i class="fas fa-book-open me-2"></i>Áreas de Estudo</h5>
-                                <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fas fa-chevron-right text-secondary"></i></span>
-                                        Fundamentos da Educação em Computação
-                                    </li>
-                                    <li><span class="fa-li"><i class="fas fa-chevron-right text-secondary"></i></span>
-                                        Metodologias de Ensino de Programação
-                                    </li>
-                                    <li><span class="fa-li"><i class="fas fa-chevron-right text-secondary"></i></span>
-                                        Desenvolvimento de Materiais Didáticos Digitais
-                                    </li>
-                                    <li><span class="fa-li"><i class="fas fa-chevron-right text-secondary"></i></span>
-                                        Psicologia da Educação Aplicada à TI
-                                    </li>
-                                </ul>
-                            </div>
+                    </div>
+                </div>
 
-                            <div class="education-projects mt-4">
-                                <h5 class="text-primary"><i class="fas fa-lightbulb me-2"></i>Objetivos</h5>
-                                <div class="project-card p-3 rounded">
-                                    <p class="mb-1">Ampliar minha capacidade pedagógica para o ensino de tecnologia,
-                                        desenvolvendo metodologias inovadoras para formação de novos profissionais na
-                                        área
-                                        de TI.</p>
-                                    <span class="badge bg-primary mt-2">Educação Tecnológica</span>
-                                    <span class="badge bg-primary mt-2">Metodologias Ativas</span>
-                                </div>
+                <!-- IFTM -->
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card h-100 overflow-hidden edu-card">
+                        <div class="edu-header bg-gradient-primary">
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Licenciatura em Computação</h3>
+                                <div class="small text-white-50"><i class="fa-solid fa-university me-1"></i>Instituto
+                                    Federal do Triângulo Mineiro (IFTM — Uberaba)</div>
+                            </div>
+                            <span class="badge bg-light text-dark">Ago 2025 – Presente</span>
+                        </div>
+                        <div class="p-4">
+                            <h6 class="text-accent"><i class="fa-solid fa-book-open me-2"></i>Áreas de Estudo &amp;
+                                Objetivos</h6>
+                            <ul class="edu-list mb-3">
+                                <li><i class="fa-solid fa-chevron-right"></i>Fundamentos da Educação em Computação</li>
+                                <li><i class="fa-solid fa-chevron-right"></i>Metodologias Ativas para Ensino de
+                                    Programação</li>
+                                <li><i class="fa-solid fa-chevron-right"></i>Desenvolvimento de Materiais Didáticos
+                                    Digitais e Gamificação</li>
+                                <li><i class="fa-solid fa-chevron-right"></i>Psicologia da Educação Aplicada à
+                                    Tecnologia da Informação</li>
+                            </ul>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="mini-tag">Educação Tecnológica</span>
+                                <span class="mini-tag">Metodologias Ativas</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- IFMG -->
-                <div class="col-lg-6">
-                    <div class="education-card card h-100 shadow-lg">
-                        <div class="card-header bg-gradient-primary">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h3 class="mb-0">Bacharelado em Administração</h3>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <i class="fas fa-university me-2"></i>
-                                        <span>Instituto Federal de Minas Gerais (IFMG)</span>
-                                    </div>
-                                </div>
-                                <div class="education-period badge bg-white text-primary">
-                                    <i class="far fa-calendar-alt me-1"></i> 2019 - 2022
-                                </div>
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card h-100 overflow-hidden edu-card">
+                        <div class="edu-header bg-gradient-primary">
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Bacharelado em Administração</h3>
+                                <div class="small text-white-50"><i class="fa-solid fa-university me-1"></i>IFMG —
+                                    Ribeirão das Neves</div>
                             </div>
+                            <span class="badge bg-light text-dark">2019 – 2022</span>
                         </div>
-                        <div class="card-body">
-                            <div class="education-highlights">
-                                <h5 class="text-primary"><i class="fas fa-trophy me-2"></i>Destaques Acadêmicos</h5>
-                                <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fas fa-chevron-right text-secondary"></i></span>
-                                        <strong>Diretor de Projetos</strong> na Neves Consultoria Jr. - Liderança de
-                                        equipes e gestão de projetos de consultoria para micro e pequenas empresas
-                                    </li>
-                                    <li><span class="fa-li"><i class="fas fa-chevron-right text-secondary"></i></span>
-                                        <strong>Representante discente</strong> na Comissão Própria de Avaliação (CPA) -
-                                        Atuação na avaliação institucional e melhoria contínua
-                                    </li>
-                                    <li><span class="fa-li"><i class="fas fa-chevron-right text-secondary"></i></span>
-                                        <strong>Palestrante</strong> na Semana Nacional de Ciência e Tecnologia (SNCT) -
-                                        Ministrei workshops sobre empreendedorismo
-                                    </li>
-                                    <li><span class="fa-li"><i class="fas fa-chevron-right text-secondary"></i></span>
-                                        <strong>Tutor acadêmico</strong> nas disciplinas de Seminários, História II e
-                                        Sociologia Aplicada à Administração
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="education-projects mt-4">
-                                <h5 class="text-primary"><i class="fas fa-lightbulb me-2"></i>Projeto Relevante</h5>
-                                <div class="project-card p-3 rounded">
-                                    <h6>"Cesta Básica e Inflação em Ribeirão das Neves"</h6>
-                                    <p class="mb-1">Pesquisa de campo sobre variação de preços e poder de compra da
-                                        população local, apresentada no congresso interno de administração.</p>
-                                    <span class="badge bg-primary mt-2">Metodologia Científica</span>
-                                    <span class="badge bg-primary mt-2">Análise de Dados</span>
-                                </div>
+                        <div class="p-4">
+                            <h6 class="text-accent"><i class="fa-solid fa-trophy me-2"></i>Destaques Acadêmicos</h6>
+                            <ul class="edu-list mb-3">
+                                <li><i class="fa-solid fa-chevron-right"></i><strong>Diretor de Projetos</strong> na
+                                    Neves Consultoria Jr. — consultoria para micro e pequenas empresas</li>
+                                <li><i class="fa-solid fa-chevron-right"></i><strong>Representante discente</strong> na
+                                    Comissão Própria de Avaliação (CPA)</li>
+                                <li><i class="fa-solid fa-chevron-right"></i><strong>Palestrante</strong> na Semana
+                                    Nacional de Ciência e Tecnologia (SNCT) — workshops de empreendedorismo</li>
+                                <li><i class="fa-solid fa-chevron-right"></i><strong>Tutor acadêmico</strong> em
+                                    Seminários, História II e Sociologia Aplicada à Administração</li>
+                            </ul>
+                            <div class="edu-subbox">
+                                <strong>Projeto Relevante:</strong> "Cesta Básica e Inflação em Ribeirão das Neves" —
+                                pesquisa de campo apresentada no congresso interno.
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Estácio -->
-                <div class="col-lg-6">
-                    <div class="education-card card h-100 shadow-lg">
-                        <div class="card-header bg-gradient-primary">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h3 class="mb-0">Bacharelado em Sistemas de Informação</h3>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <i class="fas fa-university me-2"></i>
-                                        <span>Universidade Estácio de Sá</span>
-                                    </div>
-                                </div>
-                                <div class="education-period badge bg-white text-primary">
-                                    <i class="far fa-calendar-alt me-1"></i> 2017 - 2021
-                                </div>
+                <div class="col-lg-6 reveal-up">
+                    <div class="modern-card h-100 overflow-hidden edu-card">
+                        <div class="edu-header bg-gradient-primary">
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Bacharelado em Sistemas de Informação</h3>
+                                <div class="small text-white-50"><i class="fa-solid fa-university me-1"></i>Universidade
+                                    Estácio de Sá</div>
                             </div>
+                            <span class="badge bg-light text-dark">2017 – 2021</span>
                         </div>
-                        <div class="card-body">
-                            <div class="education-skills">
-                                <h5 class="text-primary"><i class="fas fa-code me-2"></i>Habilidades Desenvolvidas</h5>
-                                <div class="skills-grid">
-                                    <!-- Fundamentos -->
-                                    <div class="skill-item">
-                                        <i class="fas fa-code text-secondary"></i>
-                                        <span>Lógica de Programação</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-calculator text-secondary"></i>
-                                        <span>Matemática Computacional</span>
-                                    </div>
-
-                                    <!-- Desenvolvimento -->
-                                    <div class="skill-item">
-                                        <i class="fab fa-js text-secondary"></i>
-                                        <span>Programação Web (HTML/CSS/JS)</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fab fa-java text-secondary"></i>
-                                        <span>Programação Orientada a Objetos</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-mobile-alt text-secondary"></i>
-                                        <span>Desenvolvimento Mobile</span>
-                                    </div>
-
-                                    <!-- Banco de Dados -->
-                                    <div class="skill-item">
-                                        <i class="fas fa-database text-secondary"></i>
-                                        <span>Modelagem de Dados</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-server text-secondary"></i>
-                                        <span>Administração de Bancos</span>
-                                    </div>
-
-                                    <!-- Engenharia -->
-                                    <div class="skill-item">
-                                        <i class="fas fa-project-diagram text-secondary"></i>
-                                        <span>Engenharia de Software</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-sitemap text-secondary"></i>
-                                        <span>Arquitetura de Sistemas</span>
-                                    </div>
-
-                                    <!-- IA e Dados -->
-                                    <div class="skill-item">
-                                        <i class="fas fa-brain text-secondary"></i>
-                                        <span>Inteligência Artificial</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-chart-line text-secondary"></i>
-                                        <span>Ciência de Dados</span>
-                                    </div>
-
-                                    <!-- Redes e Segurança -->
-                                    <div class="skill-item">
-                                        <i class="fas fa-network-wired text-secondary"></i>
-                                        <span>Redes de Computadores</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-shield-alt text-secondary"></i>
-                                        <span>Segurança da Informação</span>
-                                    </div>
-
-                                    <!-- Gestão -->
-                                    <div class="skill-item">
-                                        <i class="fas fa-tasks text-secondary"></i>
-                                        <span>Metodologias Ágeis</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-users-cog text-secondary"></i>
-                                        <span>Gestão de TI</span>
-                                    </div>
-
-                                    <!-- Sistemas -->
-                                    <div class="skill-item">
-                                        <i class="fas fa-cogs text-secondary"></i>
-                                        <span>Sistemas Operacionais</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-cloud text-secondary"></i>
-                                        <span>Computação em Nuvem</span>
-                                    </div>
-                                </div>
+                        <div class="p-4">
+                            <h6 class="text-accent mb-3"><i class="fa-solid fa-code me-2"></i>Habilidades Desenvolvidas
+                            </h6>
+                            <div class="edu-skills-grid">
+                                <span><i class="fa-solid fa-code"></i>Lógica &amp; Algoritmos</span>
+                                <span><i class="fa-solid fa-calculator"></i>Matemática Comp.</span>
+                                <span><i class="fa-brands fa-js"></i>Programação Web</span>
+                                <span><i class="fa-brands fa-java"></i>Orientação a Objetos</span>
+                                <span><i class="fa-solid fa-mobile-screen"></i>Dev. Mobile</span>
+                                <span><i class="fa-solid fa-database"></i>Modelagem &amp; Adm. BD</span>
+                                <span><i class="fa-solid fa-diagram-project"></i>Eng. &amp; Arq. Software</span>
+                                <span><i class="fa-solid fa-brain"></i>Inteligência Artificial</span>
+                                <span><i class="fa-solid fa-chart-line"></i>Ciência de Dados</span>
+                                <span><i class="fa-solid fa-network-wired"></i>Redes de Computadores</span>
+                                <span><i class="fa-solid fa-shield-halved"></i>Segurança da Info.</span>
+                                <span><i class="fa-solid fa-cloud"></i>Cloud, SO &amp; Gestão TI</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Técnico -->
-                <div class="col-lg-6">
-                    <div class="education-card card h-100 shadow-lg">
-                        <div class="card-header bg-gradient-primary">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h3 class="mb-0">Técnico em Informática</h3>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <i class="fas fa-graduation-cap me-2"></i>
-                                        <span>Escola Estadual Guerino Casassanta (PRONATEC)</span>
-                                    </div>
-                                </div>
-                                <div class="education-period badge bg-white text-primary">
-                                    <i class="far fa-calendar-alt me-1"></i> 2013 - 2014
-                                </div>
+                <!-- Técnico em Informática -->
+                <div class="col-12 reveal-up">
+                    <div class="modern-card overflow-hidden edu-card">
+                        <div class="edu-header bg-gradient-primary">
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Técnico em Informática</h3>
+                                <div class="small text-white-50"><i class="fa-solid fa-graduation-cap me-1"></i>Escola
+                                    Estadual Prof. Guerino Casassanta (PRONATEC)</div>
                             </div>
+                            <span class="badge bg-light text-dark">2013 – 2014</span>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h5 class="text-primary"><i class="fas fa-cogs me-2"></i>Hardware & Redes</h5>
-                                    <ul class="fa-ul">
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Montagem e manutenção de computadores
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Configuração e manutenção de redes locais
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Instalação de sistemas operacionais
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Diagnóstico e solução de problemas de hardware
-                                        </li>
+                        <div class="p-4">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <h6 class="text-accent"><i class="fa-solid fa-cogs me-1"></i>Hardware &amp; Redes
+                                    </h6>
+                                    <ul class="edu-list small mb-0">
+                                        <li><i class="fa-solid fa-check"></i>Montagem e manutenção</li>
+                                        <li><i class="fa-solid fa-check"></i>Redes locais e S.O.</li>
+                                        <li><i class="fa-solid fa-check"></i>Diagnóstico de hardware</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-6">
-                                    <h5 class="text-primary"><i class="fas fa-code me-2"></i>Programação</h5>
-                                    <ul class="fa-ul">
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Lógica de programação e algoritmos
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Desenvolvimento desktop básico
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Fundamentos de banco de dados
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Programação web básica (HTML/CSS)
-                                        </li>
+                                <div class="col-md-3">
+                                    <h6 class="text-accent"><i class="fa-solid fa-code me-1"></i>Programação</h6>
+                                    <ul class="edu-list small mb-0">
+                                        <li><i class="fa-solid fa-check"></i>Lógica e algoritmos</li>
+                                        <li><i class="fa-solid fa-check"></i>Desktop e banco de dados</li>
+                                        <li><i class="fa-solid fa-check"></i>Web básica (HTML/CSS)</li>
                                     </ul>
                                 </div>
-                            </div>
-
-                            <div class="row mt-3">
-                                <div class="col-md-6">
-                                    <h5 class="text-primary"><i class="fas fa-tools me-2"></i>Ferramentas</h5>
-                                    <ul class="fa-ul">
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Pacote Office avançado
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Virtualização de sistemas
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Softwares de diagnóstico
-                                        </li>
+                                <div class="col-md-3">
+                                    <h6 class="text-accent"><i class="fa-solid fa-tools me-1"></i>Ferramentas</h6>
+                                    <ul class="edu-list small mb-0">
+                                        <li><i class="fa-solid fa-check"></i>Pacote Office avançado</li>
+                                        <li><i class="fa-solid fa-check"></i>Virtualização de sistemas</li>
+                                        <li><i class="fa-solid fa-check"></i>Softwares de diagnóstico</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-6">
-                                    <h5 class="text-primary"><i class="fas fa-user-tie me-2"></i>Atividades</h5>
-                                    <ul class="fa-ul">
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Suporte técnico a usuários
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Documentação técnica
-                                        </li>
-                                        <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>
-                                            Projeto integrador final
-                                        </li>
+                                <div class="col-md-3">
+                                    <h6 class="text-accent"><i class="fa-solid fa-user-tie me-1"></i>Atividades</h6>
+                                    <ul class="edu-list small mb-0">
+                                        <li><i class="fa-solid fa-check"></i>Suporte técnico a usuários</li>
+                                        <li><i class="fa-solid fa-check"></i>Documentação técnica</li>
+                                        <li><i class="fa-solid fa-check"></i>Projeto integrador final</li>
                                     </ul>
                                 </div>
                             </div>
@@ -837,211 +977,134 @@
         </div>
     </section>
 
-    <!-- Artigos Publicados -->
-    <section id="publications" class="py-5 section-bg">
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PUBLICAÇÕES
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="publications" class="py-section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-heading text-center mb-4 reveal-up">
+                <span class="section-eyebrow">Produção Científica</span>
                 <h2>Artigos Publicados</h2>
-                <p class="lead text-muted">Conheça meus trabalhos acadêmicos e publicações.</p>
             </div>
 
-            <div class="card shadow mb-4">
-                <div class="card-body">
-                    <h4 class="card-title mb-2">
-                        A deterioração da democracia: o enfraquecimento das instituições de 1995 a 2021
-                    </h4>
-                    <p class="mb-2 text-muted">
-                        <i class="bi bi-journal-text me-1"></i>
-                        Publicado na Revista História em Curso – PUC Minas, Junho de 2022 | ISSN: 2178-1044
-                    </p>
-                    <p class="mb-3">
-                        O artigo analisa o enfraquecimento das instituições democráticas brasileiras entre 1995 e 2021,
-                        destacando os impactos da retórica autoritária e populista no cenário político nacional.
-                    </p>
-                    <a href="https://periodicos.pucminas.br/historiaemcurso/article/view/28748" target="_blank"
-                        class="btn btn-outline-primary">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> Acessar artigo
-                    </a>
+            <div class="modern-card p-4 reveal-up publication-highlight">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-9">
+                        <span class="badge bg-accent text-dark mb-2">Revista História em Curso — PUC Minas • Junho 2022
+                            | ISSN: 2178-1044</span>
+                        <h3 class="h5 mb-2">A deterioração da democracia: o enfraquecimento das instituições de 1995 a
+                            2021</h3>
+                        <p class="text-muted small mb-0">
+                            O artigo analisa o enfraquecimento das instituições democráticas brasileiras entre 1995 e
+                            2021, destacando os impactos da retórica autoritária e populista no cenário político
+                            nacional.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 text-lg-end">
+                        <a href="https://periodicos.pucminas.br/historiaemcurso/article/view/28748" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-outline-accent btn-sm">
+                            <i class="bi bi-box-arrow-up-right me-1"></i>Acessar Artigo
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5 section-bg">
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SKILLS
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="skills" class="py-section section-alt">
         <div class="container">
-            <div class="section-title">
-                <h2>Habilidades Técnicas</h2>
-                <p class="lead text-muted">Competências desenvolvidas ao longo da minha carreira profissional</p>
+            <div class="section-heading text-center mb-5 reveal-up">
+                <span class="section-eyebrow">Stack Completa</span>
+                <h2>Habilidades Profissionais &amp; Técnicas</h2>
             </div>
 
             <div class="row g-4">
-                <!-- Coluna Esquerda -->
-                <div class="col-lg-6">
-                    <!-- Linguagens de Programação -->
-                    <div class="skill-card card shadow-sm">
-                        <div class="card-header bg-gradient-primary">
-                            <h4 class="mb-0 text-white"><i class="fas fa-code me-2"></i>Linguagens de Programação</h4>
-                        </div>
-                        <div class="card-body">
-                            <!-- Java -->
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <i class="fab fa-java text-primary"></i>
-                                    <div>
-                                        <h5>Java</h5>
-                                        <p class="skill-description">Desenvolvimento de aplicações empresariais com
-                                            Spring Boot, JPA/Hibernate e arquitetura MVC.</p>
-                                    </div>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="badge bg-light text-dark">Spring Boot</span>
-                                    <span class="badge bg-light text-dark">JPA</span>
-                                    <span class="badge bg-light text-dark">Maven</span>
-                                </div>
-                            </div>
-
-                            <!-- Python -->
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <i class="fab fa-python text-primary"></i>
-                                    <div>
-                                        <h5>Python</h5>
-                                        <p class="skill-description">Automação de processos e análise de dados com
-                                            Pandas/NumPy. Desenvolvimento web com Django.</p>
-                                    </div>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="badge bg-light text-dark">Django</span>
-                                    <span class="badge bg-light text-dark">Pandas</span>
-                                    <span class="badge bg-light text-dark">Automação</span>
-                                </div>
-                            </div>
-
-                            <!-- JavaScript -->
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <i class="fab fa-js text-primary"></i>
-                                    <div>
-                                        <h5>JavaScript</h5>
-                                        <p class="skill-description">Desenvolvimento front-end com React.js e Vue.js.
-                                            Domínio de ES6+ e consumo de APIs REST.</p>
-                                    </div>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="badge bg-light text-dark">React</span>
-                                    <span class="badge bg-light text-dark">Node.js</span>
-                                    <span class="badge bg-light text-dark">TypeScript</span>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4 reveal-up">
+                    <div class="modern-card h-100 p-4 skill-box">
+                        <div class="skill-icon-wrap mb-3"><i class="fa-solid fa-code"></i></div>
+                        <h4 class="h5">Linguagens &amp; Frameworks</h4>
+                        <p class="small text-muted">Desenvolvimento back-end, front-end, desktop, sistemas embarcados e
+                            APIs REST.</p>
+                        <div class="d-flex flex-wrap gap-1 mt-auto">
+                            <span class="mini-tag">Java</span><span class="mini-tag">Spring Boot</span><span
+                                class="mini-tag">JPA</span>
+                            <span class="mini-tag">PHP 8</span><span class="mini-tag">Laravel</span><span
+                                class="mini-tag">Python</span>
+                            <span class="mini-tag">Django</span><span class="mini-tag">JavaScript ES6+</span><span
+                                class="mini-tag">React</span>
+                            <span class="mini-tag">Node.js</span><span class="mini-tag">TypeScript</span><span
+                                class="mini-tag">C</span>
+                            <span class="mini-tag">C++</span><span class="mini-tag">Rust</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Coluna Direita - Parte Superior -->
-                <div class="col-lg-6">
-                    <!-- Banco de Dados -->
-                    <div class="skill-card card shadow-sm">
-                        <div class="card-header bg-gradient-primary">
-                            <h4 class="mb-0 text-white"><i class="fas fa-database me-2"></i>Banco de Dados</h4>
-                        </div>
-                        <div class="card-body">
-                            <!-- MySQL -->
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <i class="fas fa-database text-primary"></i>
-                                    <div>
-                                        <h5>MySQL & PostgreSQL</h5>
-                                        <p class="skill-description">Modelagem relacional avançada e otimização de
-                                            queries complexas.</p>
-                                    </div>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="badge bg-light text-dark">Modelagem</span>
-                                    <span class="badge bg-light text-dark">Otimização</span>
-                                    <span class="badge bg-light text-dark">SQL</span>
-                                </div>
-                            </div>
-
-                            <!-- MongoDB -->
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <i class="fas fa-fire text-primary"></i>
-                                    <div>
-                                        <h5>MongoDB</h5>
-                                        <p class="skill-description">Desenvolvimento de aplicações NoSQL com esquemas
-                                            flexíveis e agregações.</p>
-                                    </div>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="badge bg-light text-dark">NoSQL</span>
-                                    <span class="badge bg-light text-dark">Aggregation</span>
-                                    <span class="badge bg-light text-dark">Mongoose</span>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4 reveal-up">
+                    <div class="modern-card h-100 p-4 skill-box">
+                        <div class="skill-icon-wrap mb-3"><i class="fa-solid fa-database"></i></div>
+                        <h4 class="h5">Web, 3D &amp; Bancos de Dados</h4>
+                        <p class="small text-muted">Interfaces responsivas, renderização 3D no navegador, modelagem
+                            relacional e NoSQL.</p>
+                        <div class="d-flex flex-wrap gap-1 mt-auto">
+                            <span class="mini-tag">HTML5</span><span class="mini-tag">CSS3</span><span
+                                class="mini-tag">Bootstrap 5</span>
+                            <span class="mini-tag">Three.js</span><span class="mini-tag">MySQL</span><span
+                                class="mini-tag">MariaDB</span>
+                            <span class="mini-tag">PostgreSQL</span><span class="mini-tag">MongoDB</span><span
+                                class="mini-tag">Firebase</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Segunda Linha -->
-                <div class="col-lg-6">
-                    <!-- Desenvolvimento Web -->
-                    <div class="skill-card card shadow-sm">
-                        <div class="card-header bg-gradient-primary">
-                            <h4 class="mb-0 text-white"><i class="fas fa-laptop-code me-2"></i>Desenvolvimento Web</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="web-skill">
-                                        <i class="fab fa-html5 text-danger fa-2x"></i>
-                                        <h6 class="mt-2">HTML5 Semântico</h6>
-                                        <p class="small">Estruturação acessível com elementos semânticos</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="web-skill">
-                                        <i class="fab fa-css3-alt text-primary fa-2x"></i>
-                                        <h6 class="mt-2">CSS3 Avançado</h6>
-                                        <p class="small">Flexbox, Grid Layout e design responsivo</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="web-skill">
-                                        <i class="fab fa-react text-info fa-2x"></i>
-                                        <h6 class="mt-2">React.js</h6>
-                                        <p class="small">Componentes funcionais e Hooks</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="web-skill">
-                                        <i class="fab fa-bootstrap text-purple fa-2x"></i>
-                                        <h6 class="mt-2">Bootstrap 5</h6>
-                                        <p class="small">Interfaces responsivas</p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4 reveal-up">
+                    <div class="modern-card h-100 p-4 skill-box">
+                        <div class="skill-icon-wrap mb-3"><i class="fa-solid fa-microchip"></i></div>
+                        <h4 class="h5">IoT, Mecatrônica &amp; IA</h4>
+                        <p class="small text-muted">Automação industrial, microcontroladores, visão computacional e IA
+                            embarcada/generativa.</p>
+                        <div class="d-flex flex-wrap gap-1 mt-auto">
+                            <span class="mini-tag">ESP32 / CAM</span><span class="mini-tag">PlatformIO</span><span
+                                class="mini-tag">Arduino</span>
+                            <span class="mini-tag">Raspberry Pi</span><span class="mini-tag">CLP / Automação</span><span
+                                class="mini-tag">YOLOv8</span>
+                            <span class="mini-tag">OpenCV</span><span class="mini-tag">TensorFlow</span><span
+                                class="mini-tag">DeepFace</span>
+                            <span class="mini-tag">MediaPipe</span><span class="mini-tag">Ollama / LLMs</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <!-- Outras Competências -->
-                    <div class="skill-card card shadow-sm">
-                        <div class="card-header bg-gradient-primary">
-                            <h4 class="mb-0 text-white"><i class="fas fa-tools me-2"></i>Outras Competências</h4>
+                <div class="col-md-6 reveal-up">
+                    <div class="modern-card h-100 p-4 skill-box">
+                        <div class="skill-icon-wrap mb-3"><i class="fa-brands fa-linux"></i></div>
+                        <h4 class="h5">Sistemas Operacionais &amp; Infraestrutura</h4>
+                        <p class="small text-muted">Administração de ambientes Linux/Windows, scripts de automação,
+                            containers e versionamento.</p>
+                        <div class="d-flex flex-wrap gap-1 mt-auto">
+                            <span class="mini-tag">Linux</span><span class="mini-tag">Ubuntu</span><span
+                                class="mini-tag">Windows</span>
+                            <span class="mini-tag">Windows Server</span><span class="mini-tag">Shell Script</span><span
+                                class="mini-tag">Docker</span>
+                            <span class="mini-tag">Git / GitHub</span><span class="mini-tag">CI/CD</span>
                         </div>
-                        <div class="card-body">
-                            <div class="skills-cloud">
-                                <span class="skill-badge bg-primary">Git</span>
-                                <span class="skill-badge bg-secondary">Metodologias Ágeis</span>
-                                <span class="skill-badge bg-success">Docker</span>
-                                <span class="skill-badge bg-info">CI/CD</span>
-                                <span class="skill-badge bg-dark">Testes</span>
-                                <span class="skill-badge bg-info">Shell Script</span>
-                                <span class="skill-badge bg-dark">IoT</span>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 reveal-up">
+                    <div class="modern-card h-100 p-4 skill-box">
+                        <div class="skill-icon-wrap mb-3"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h4 class="h5">Metodologias &amp; Ferramentas Corporativas</h4>
+                        <p class="small text-muted">Gestão ágil de equipes, planejamento de projetos e produtividade
+                            corporativa/educacional.</p>
+                        <div class="d-flex flex-wrap gap-1 mt-auto">
+                            <span class="mini-tag">SCRUM</span><span class="mini-tag">Kanban</span><span
+                                class="mini-tag">Modelo Cascata</span>
+                            <span class="mini-tag">Trello</span><span class="mini-tag">Microsoft Office</span><span
+                                class="mini-tag">Google Workspace</span>
+                            <span class="mini-tag">Canva</span>
                         </div>
                     </div>
                 </div>
@@ -1049,549 +1112,268 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5">
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PROJECTS (catálogo completo)
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="projects" class="py-section">
         <div class="container">
-            <h2 class="text-center mb-5">Meus Projetos</h2>
-            <p class="text-center mb-5 section-intro">Aqui estão alguns dos projetos que desenvolvi, demonstrando minhas
-                habilidades em diversas tecnologias e áreas de atuação.</p>
+            <div class="section-heading text-center mb-4 reveal-up">
+                <span class="section-eyebrow">Portfólio Completo</span>
+                <h2>Outros Projetos Desenvolvidos</h2>
+                <p class="text-muted mx-auto max-w-650">
+                    Sistemas industriais, inteligência artificial, plataformas corporativas, IoT e projetos
+                    educacionais.
+                </p>
+            </div>
 
-            <!-- Projetos em Destaque -->
-            <div class="row mb-5">
-                <div class="col-12 mb-4">
-                    <h3 class="section-subtitle mb-4"><i class="bi bi-stars me-2" aria-hidden="true"></i>Projetos em
-                        Destaque</h3>
-                    <p class="section-description">Projetos que representam meu melhor trabalho e demonstram habilidades
-                        técnicas avançadas.</p>
-                </div>
+            <!-- Filtros -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5 reveal-up no-print" id="projectFilters">
+                <button class="btn filter-btn active" data-filter="all">Todos</button>
+                <button class="btn filter-btn" data-filter="iot">IoT &amp; Mecatrônica</button>
+                <button class="btn filter-btn" data-filter="ia">IA &amp; Visão</button>
+                <button class="btn filter-btn" data-filter="web">Web &amp; Sistemas</button>
+                <button class="btn filter-btn" data-filter="edu">Educação &amp; Jogos</button>
+            </div>
 
-                <!-- Sistema de Controle de Compressores via ESP32 -->
-                <div class="col-12 mb-4">
-                    <div class="card shadow-lg featured-project">
-                        <div class="card-header bg-gradient-primary text-white">
-                            <h3 class="mb-0">Sistema de Controle de Compressores via ESP32</h3>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">ESP32</span>
-                                <span class="badge bg-light text-dark me-1">IoT</span>
-                                <span class="badge bg-light text-dark">C++</span>
-                            </div>
+            <div class="row g-4" id="curatedProjectsGrid">
+                <!-- BIOHELP -->
+                <div class="col-md-6 col-lg-4 project-item reveal-up" data-category="ia">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-ia">
+                            <span class="project-year">2025</span>
+                            <i class="bi bi-shield-check"></i>
+                            <span class="project-tag-top">Deep Learning</span>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="project-image mb-3">
-                                        <img src="https://via.placeholder.com/600x400?text=Compressor+Control"
-                                            alt="Controle de Compressores" class="img-fluid rounded">
-                                    </div>
-                                    <div class="language-stats mt-4">
-                                        <h5 class="mb-3"><i class="bi bi-code-slash me-2"></i>Tecnologias:</h5>
-                                        <div class="skills-cloud">
-                                            <span class="badge bg-primary">ESP32</span>
-                                            <span class="badge bg-secondary">C++</span>
-                                            <span class="badge bg-success">PlatformIO</span>
-                                            <span class="badge bg-info">Wi-Fi</span>
-                                            <span class="badge bg-dark">HTML/CSS</span>
-                                            <span class="badge bg-warning">JavaScript</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="mb-3">Sistema Industrial Completo</h4>
-                                    <p class="card-text">Sistema avançado para controle remoto de compressores
-                                        industriais com interface web integrada e monitoramento em tempo real.</p>
-
-                                    <h5 class="mt-4">Principais Funcionalidades</h5>
-                                    <ul class="feature-list">
-                                        <li class="d-flex align-items-start mb-2">
-                                            <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                            <span><strong>Interface web responsiva</strong> com autenticação de
-                                                usuários</span>
-                                        </li>
-                                        <li class="d-flex align-items-start mb-2">
-                                            <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                            <span><strong>Controle remoto</strong> de compressores industriais</span>
-                                        </li>
-                                        <li class="d-flex align-items-start mb-2">
-                                            <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                            <span><strong>Monitoramento em tempo real</strong> de pressão e
-                                                umidade</span>
-                                        </li>
-                                        <li class="d-flex align-items-start mb-2">
-                                            <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                            <span><strong>Operação dual-mode</strong> (Access Point e rede Wi-Fi
-                                                existente)</span>
-                                        </li>
-                                        <li class="d-flex align-items-start">
-                                            <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                            <span><strong>Sistema de erros personalizado</strong> para falhas de
-                                                conexão</span>
-                                        </li>
-                                    </ul>
-
-                                    <div class="mt-4">
-                                        <h5>Minha Contribuição</h5>
-                                        <p>Orientação técnica da equipe de 5 alunos, arquitetura do sistema e revisão de
-                                            código.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="https://github.com/LYuri26/CompressorWeb" class="btn btn-primary"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github me-1"></i>Ver Projeto no GitHub
-                                </a>
-                                <div class="text-muted">
-                                    <i class="bi bi-calendar me-1"></i>2023 |
-                                    <i class="bi bi-code-square me-1 ms-2"></i>ESP32 |
-                                    <i class="bi bi-wifi me-1 ms-2"></i>IoT
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sistema de Inspeção Automatizada de BIG BAGS -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow project-card">
-                        <div class="card-header bg-info text-white">
-                            <h4 class="mb-0">Inspeção Automatizada de BIG BAGS</h4>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">Python</span>
-                                <span class="badge bg-light text-dark me-1">OpenCV</span>
-                                <span class="badge bg-light text-dark">YOLO</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="project-image mb-3">
-                                <img src="https://via.placeholder.com/300x200?text=Inspecao+BIG+BAGS"
-                                    alt="Inspeção de BIG BAGS" class="img-fluid rounded">
-                            </div>
-
-                            <h5 class="project-subtitle">Objetivo</h5>
-                            <p class="card-text">
-                                Sistema industrial sob demanda para inspeção visual automática de BIG BAGS,
-                                focado na detecção de defeitos em linha de produção. Entregue com exclusividade
-                                ao contratante, sem retenção de direitos.
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">BIOHELP — Facial, Emoções e Gestos</h3>
+                            <p class="small text-muted">
+                                Plataforma de IA com fusão multimodal (TensorFlow, DeepFace e MediaPipe) para
+                                identificar pessoas, interpretar emoções faciais e detectar o gesto internacional
+                                silencioso de pedido de ajuda.
                             </p>
-
-                            <h5 class="project-subtitle mt-3">Características do Sistema</h5>
-                            <ul class="feature-list">
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Detecção automática de defeitos via visão computacional</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Interface gráfica industrial otimizada para ambiente fabril</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Processamento local sem dependência de nuvem</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Armazenamento hierarquizado de inspeções e backups</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Cadastro e gestão de empresas com políticas de aceitação</span>
-                                </li>
-                                <li class="d-flex align-items-start">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Geração automática de relatórios e registros de auditoria</span>
-                                </li>
-                            </ul>
-
-                            <h5 class="project-subtitle mt-3">Tecnologias</h5>
-                            <ul class="tech-list">
-                                <li class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                    <span>Python, OpenCV, YOLO</span>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                    <span>Interface gráfica local (desktop)</span>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                    <span>Estrutura modular para expansão futura</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="card-footer bg-transparent border-top-0">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="#" class="btn btn-info btn-sm disabled" tabindex="-1" aria-disabled="true">
-                                    <i class="bi bi-github me-1"></i>Privado
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">TensorFlow</span><span class="mini-tag">DeepFace</span><span
+                                    class="mini-tag">MediaPipe</span><span class="mini-tag">MySQL</span>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/LenonYuri96" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-github me-1"></i>GitHub
                                 </a>
-                                <div class="text-muted small">
-                                    <i class="bi bi-calendar me-1"></i>2024
-                                </div>
+                                <span class="small text-muted">Segurança</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Maquete de Fazenda Automatizada -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow project-card">
-                        <div class="card-header bg-success text-white">
-                            <h4 class="mb-0">Maquete de Fazenda Automatizada</h4>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">ESP32</span>
-                                <span class="badge bg-light text-dark">C++</span>
-                            </div>
+                <!-- AURA / ZEBU-AI -->
+                <div class="col-md-6 col-lg-4 project-item reveal-up" data-category="ia web">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-ia">
+                            <span class="project-year">2026</span>
+                            <i class="bi bi-robot"></i>
+                            <span class="project-tag-top">3D + LLM + P2P</span>
                         </div>
-                        <div class="card-body">
-                            <div class="project-image mb-3">
-                                <img src="https://via.placeholder.com/300x200?text=Smart+Farm"
-                                    alt="Fazenda Automatizada" class="img-fluid rounded">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">AURA // ZEBU-AI 3D — Kiosk Interativo</h3>
+                            <p class="small text-muted">
+                                Totem animatrônico 3D em Three.js com Groq LLM, voz masculina com lip-sync estrito,
+                                interação tátil e fila mobile P2P via WebRTC (PeerJS) com moderação remota secreta no
+                                smartphone.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">Three.js</span><span class="mini-tag">WebRTC</span><span
+                                    class="mini-tag">Groq LLM</span><span class="mini-tag">Web Speech</span>
                             </div>
-                            <h5 class="project-subtitle">Visão Geral</h5>
-                            <p class="card-text">Modelo didático para ensino de IoT e automação agrícola com sistema de
-                                iluminação automatizada via Wi-Fi.</p>
-
-                            <h5 class="project-subtitle mt-3">Inovações</h5>
-                            <ul class="feature-list">
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Interface web responsiva com autenticação</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Integração de sensores ambientais</span>
-                                </li>
-                                <li class="d-flex align-items-start">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Carcasa protetora impressa em 3D</span>
-                                </li>
-                            </ul>
-
-                            <h5 class="project-subtitle mt-3">Equipe</h5>
-                            <p>Projeto desenvolvido por 5 alunos sob minha orientação</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="https://github.com/LYuri26/FazendaAutomatizada" class="btn btn-success btn-sm"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github me-1"></i>Ver Projeto
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/LenonYuri96" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-github me-1"></i>GitHub
                                 </a>
-                                <div class="text-muted small">
-                                    <i class="bi bi-calendar me-1"></i>2023
-                                </div>
+                                <span class="small text-muted">Feiras de IA</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- RPG Combat -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow project-card">
-                        <div class="card-header bg-danger text-white">
-                            <h4 class="mb-0">RPG Combat - Sistema de Combate Tático</h4>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">JavaScript</span>
-                                <span class="badge bg-light text-dark">HTML5</span>
-                            </div>
+                <!-- Tomada Inteligente -->
+                <div class="col-md-6 col-lg-4 project-item reveal-up" data-category="iot">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-iot">
+                            <span class="project-year">2025</span>
+                            <i class="bi bi-plug-fill"></i>
+                            <span class="project-tag-top">Edge IIoT</span>
                         </div>
-                        <div class="card-body">
-                            <div class="project-image mb-3">
-                                <img src="https://via.placeholder.com/300x200?text=RPG+Combat" alt="RPG Combat"
-                                    class="img-fluid rounded">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Tomada Inteligente Industrial IIoT</h3>
+                            <p class="small text-muted">
+                                Retrofit com ESP32 medindo corrente RMS (ACS712), kWh, temperatura (DS18B20) e vibração
+                                (SW-420), com corte autônomo em sobrecarga, display OLED I2C e relatório JSON diário via
+                                Bluetooth CLI.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">ESP32</span><span class="mini-tag">ACS712</span><span
+                                    class="mini-tag">OLED I2C</span><span class="mini-tag">Bluetooth</span>
                             </div>
-                            <h5 class="project-subtitle">Características Únicas</h5>
-                            <ul class="feature-list">
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>15 classes balanceadas com habilidades especiais</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Sistema dual de recursos (Stamina/Mana)</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>50+ habilidades com penalidades estratégicas</span>
-                                </li>
-                                <li class="d-flex align-items-start">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Mecânicas baseadas em D20 com críticos/falhas</span>
-                                </li>
-                            </ul>
-
-                            <h5 class="project-subtitle mt-3">Destaque de Design</h5>
-                            <p>Tabelas de atributos detalhadas e sistema de combate profundo com arquitetura modular
-                                para expansão.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="https://github.com/LYuri26/JogoRPG" class="btn btn-danger btn-sm"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github me-1"></i>Ver Projeto
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/LenonYuri96" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-github me-1"></i>GitHub
                                 </a>
-                                <div class="text-muted small">
-                                    <i class="bi bi-calendar me-1"></i>2023
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projetos de IA e Visão Computacional -->
-            <div class="row mb-5">
-                <div class="col-12 mb-4">
-                    <h3 class="section-subtitle mb-4"><i class="bi bi-robot me-2" aria-hidden="true"></i>IA e Visão
-                        Computacional</h3>
-                    <p class="section-description">Projetos envolvendo inteligência artificial, aprendizado de máquina e
-                        visão computacional.</p>
-                </div>
-
-                <!-- IALab - Chatbot Fidélis 4.0 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow project-card">
-                        <div class="card-header bg-info text-white">
-                            <h4 class="mb-0">IALab - Chatbot Fidélis 4.0</h4>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">PHP</span>
-                                <span class="badge bg-light text-dark">JavaScript</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="project-image mb-3">
-                                <img src="https://via.placeholder.com/300x200?text=Chatbot+Fidelis"
-                                    alt="Chatbot Fidélis" class="img-fluid rounded">
-                            </div>
-                            <p class="card-text">Assistente virtual para o SENAI Lab Uberaba com integração com MySQL e
-                                APIs de IA (Ollama/DeepSeek).</p>
-
-                            <h5 class="project-subtitle mt-3">Principais Funcionalidades</h5>
-                            <ul class="feature-list">
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Sistema de autenticação e histórico de conversas</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Integração com Web Speech API para interação por voz</span>
-                                </li>
-                                <li class="d-flex align-items-start">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Respostas contextualizadas baseadas em banco de conhecimento</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="https://github.com/LYuri26/IALab" class="btn btn-info btn-sm" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github me-1"></i>Ver Projeto
-                                </a>
-                                <div class="text-muted small">
-                                    <i class="bi bi-calendar me-1"></i>2023
-                                </div>
+                                <span class="small text-muted">Preditiva</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Reconhecimento Facial Python -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow project-card">
-                        <div class="card-header bg-info text-white">
-                            <h4 class="mb-0">Reconhecimento Facial Python</h4>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">Python</span>
-                                <span class="badge bg-light text-dark">OpenCV</span>
-                            </div>
+                <!-- LabManager & Esfera de Hansen -->
+                <div class="col-md-6 col-lg-4 project-item reveal-up" data-category="web ia edu">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-web">
+                            <span class="project-year">2025–2026</span>
+                            <i class="bi bi-eyedropper"></i>
+                            <span class="project-tag-top">Química &amp; IA</span>
                         </div>
-                        <div class="card-body">
-                            <div class="project-image mb-3">
-                                <img src="https://via.placeholder.com/300x200?text=Facial+Recognition"
-                                    alt="Reconhecimento Facial" class="img-fluid rounded">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">LabManager &amp; Esfera de Hansen 3D</h3>
+                            <p class="small text-muted">
+                                <strong>LabManager:</strong> gestão laboratorial (reagentes, FISPQ, preventivas e
+                                ocorrências) com IA Gemini/offline. <strong>Esfera de Hansen 3D:</strong> visualização
+                                de solubilidade química em Three.js com exportação PDF.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">Three.js</span><span class="mini-tag">PHP MVC</span><span
+                                    class="mini-tag">Gemini IA</span><span class="mini-tag">jsPDF</span>
                             </div>
-                            <h5 class="project-subtitle">Visão Geral</h5>
-                            <p class="card-text">Sistema de controle de acesso para catracas do SENAI utilizando
-                                reconhecimento facial.</p>
-
-                            <h5 class="project-subtitle mt-3">Tecnologias Utilizadas</h5>
-                            <ul class="tech-list">
-                                <li class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                    <span>Python com OpenCV e DeepFace</span>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                    <span>Banco de dados de usuários cadastrados</span>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                    <span>Interface web para administração</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="https://github.com/LYuri26/ReconhecimentoFacialPython"
-                                    class="btn btn-info btn-sm" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github me-1"></i>Ver Projeto
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/LenonYuri96" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-github me-1"></i>GitHub
                                 </a>
-                                <div class="text-muted small">
-                                    <i class="bi bi-calendar me-1"></i>2023
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projetos Educacionais -->
-            <div class="row mb-5">
-                <div class="col-12 mb-4">
-                    <h3 class="section-subtitle mb-4"><i class="bi bi-mortarboard-fill me-2"
-                            aria-hidden="true"></i>Projetos Educacionais</h3>
-                    <p class="section-description">Projetos desenvolvidos para o ambiente educacional, incluindo
-                        materiais didáticos e sistemas para instituições de ensino.</p>
-                </div>
-
-                <!-- QuizBiblioteca2024 -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow project-card">
-                        <div class="card-header bg-warning text-dark">
-                            <h4 class="mb-0">QuizBiblioteca2024</h4>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">JavaScript</span>
-                                <span class="badge bg-light text-dark">HTML5</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="project-image mb-3">
-                                <img src="https://via.placeholder.com/300x200?text=Library+Quiz" alt="Quiz Biblioteca"
-                                    class="img-fluid rounded">
-                            </div>
-                            <p class="card-text">Teste de personalidade literária com recomendações de livros baseadas
-                                no perfil do usuário.</p>
-
-                            <h5 class="project-subtitle mt-3">Características</h5>
-                            <ul class="feature-list">
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Questionário com algoritmo de perfilamento</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Banco de dados de livros categorizados</span>
-                                </li>
-                                <li class="d-flex align-items-start">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Interface interativa e responsiva</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="#" class="btn btn-warning btn-sm" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github me-1"></i>Ver Projeto
-                                </a>
-                                <div class="text-muted small">
-                                    <i class="bi bi-calendar me-1"></i>2024
-                                </div>
+                                <span class="small text-muted">Laboratório</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ProjetoVagasSenai -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow project-card">
-                        <div class="card-header bg-warning text-dark">
-                            <h4 class="mb-0">ProjetoVagasSenai</h4>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">PHP</span>
-                                <span class="badge bg-light text-dark">MySQL</span>
-                            </div>
+                <!-- IALab & Catraca Facial -->
+                <div class="col-md-6 col-lg-4 project-item reveal-up" data-category="ia iot">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-ia">
+                            <span class="project-year">2023–2025</span>
+                            <i class="bi bi-person-bounding-box"></i>
+                            <span class="project-tag-top">IA &amp; Câmera</span>
                         </div>
-                        <div class="card-body">
-                            <div class="project-image mb-3">
-                                <img src="https://via.placeholder.com/300x200?text=Job+Platform"
-                                    alt="Plataforma de Vagas" class="img-fluid rounded">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">IALab Fidélis 4.0, Catraca Facial &amp; ESP32-CAM</h3>
+                            <p class="small text-muted">
+                                Chatbot para o SENAI Lab com Ollama/DeepSeek e voz, controle de acesso por
+                                reconhecimento facial em catracas (Python/OpenCV) e detecção de ferramentas com COCO-SSD
+                                no ESP32-CAM.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">ESP32-CAM</span><span class="mini-tag">OpenCV</span><span
+                                    class="mini-tag">Ollama</span><span class="mini-tag">PHP/MySQL</span>
                             </div>
-                            <p class="card-text">Plataforma de gerenciamento de vagas e marketing institucional para o
-                                SENAI.</p>
-
-                            <h5 class="project-subtitle mt-3">Funcionalidades</h5>
-                            <ul class="feature-list">
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Sistema de cadastro de vagas e candidatos</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Painel administrativo completo</span>
-                                </li>
-                                <li class="d-flex align-items-start">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Relatórios e análises de dados</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="#" class="btn btn-warning btn-sm" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github me-1"></i>Ver Projeto
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/LYuri26/IALab" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-github me-1"></i>IALab
                                 </a>
-                                <div class="text-muted small">
-                                    <i class="bi bi-calendar me-1"></i>2024
-                                </div>
+                                <a href="https://github.com/LYuri26/ReconhecimentoFacialPython" target="_blank"
+                                    rel="noopener noreferrer" class="small">Catraca Facial</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Scrum Jogo Biblioteca -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow project-card">
-                        <div class="card-header bg-warning text-dark">
-                            <h4 class="mb-0">Scrum Jogo Biblioteca</h4>
-                            <div class="project-meta">
-                                <span class="badge bg-light text-dark me-1">SCRUM</span>
-                                <span class="badge bg-light text-dark">Educação</span>
-                            </div>
+                <!-- LipSync, BirdBox, Fazenda -->
+                <div class="col-md-6 col-lg-4 project-item reveal-up" data-category="edu iot">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-edu">
+                            <span class="project-year">2023–2026</span>
+                            <i class="bi bi-mic-fill"></i>
+                            <span class="project-tag-top">Real-Time &amp; IoT</span>
                         </div>
-                        <div class="card-body">
-                            <div class="project-image mb-3">
-                                <img src="https://via.placeholder.com/300x200?text=Scrum+Game" alt="Jogo Scrum"
-                                    class="img-fluid rounded">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">LipSync 2D, BirdBox &amp; Fazenda ESP32</h3>
+                            <p class="small text-muted">
+                                <strong>LipSync:</strong> animação labial por fonemas via Web Audio API.
+                                <strong>BirdBox:</strong> jogo multiplayer sonoro com Firebase. <strong>Fazenda
+                                    Automatizada:</strong> maquete IoT Wi-Fi com ESP32 e impressão 3D.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">Web Audio</span><span class="mini-tag">Firebase</span><span
+                                    class="mini-tag">ESP32</span>
                             </div>
-                            <p class="card-text">Jogo interativo desenvolvido por 35 alunos usando metodologia SCRUM
-                                para ensino de gestão de projetos.</p>
-
-                            <h5 class="project-subtitle mt-3">Destaques</h5>
-                            <ul class="feature-list">
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Desenvolvimento colaborativo com equipes multifuncionais</span>
-                                </li>
-                                <li class="d-flex align-items-start mb-2">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Sprints bem definidos com entregas incrementais</span>
-                                </li>
-                                <li class="d-flex align-items-start">
-                                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                    <span>Ferramentas ágeis como Trello e Git Flow</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="#" class="btn btn-warning btn-sm" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github me-1"></i>Ver Projeto
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="https://lyuri26.github.io/Semana-Biblioteca-2025" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-play-fill me-1"></i>BirdBox Demo
                                 </a>
-                                <div class="text-muted small">
-                                    <i class="bi bi-calendar me-1"></i>2023
-                                </div>
+                                <a href="https://github.com/LYuri26/FazendaAutomatizada" target="_blank"
+                                    rel="noopener noreferrer" class="small">Fazenda IoT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recanto & Gestão Escolar -->
+                <div class="col-md-6 col-lg-4 project-item reveal-up" data-category="web">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-web">
+                            <span class="project-year">2024–2025</span>
+                            <i class="bi bi-shop"></i>
+                            <span class="project-tag-top">Full Stack</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Recanto Pescador &amp; Gestão Escolar</h3>
+                            <p class="small text-muted">
+                                <strong>Recanto Pescador:</strong> cardápio digital com busca, porções, comanda e pedido
+                                via WhatsApp. <strong>Gestão Escolar:</strong> controle multi-nível de estoque e kits
+                                com assistente IA Fidélis 4.0 e Flora Sabão (PCP).
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">PHP / MySQL</span><span class="mini-tag">Bootstrap 5</span><span
+                                    class="mini-tag">JavaScript</span>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="https://lyuri26.github.io/CardapioRecanto/" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-box-arrow-up-right me-1"></i>Cardápio
+                                </a>
+                                <a href="https://github.com/LYuri26/SistemadeGestao" target="_blank"
+                                    rel="noopener noreferrer" class="small">Gestão Escolar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jogos & Aulas -->
+                <div class="col-md-6 col-lg-4 project-item reveal-up" data-category="edu">
+                    <div class="modern-card project-card h-100">
+                        <div class="project-banner banner-edu">
+                            <span class="project-year">2023–2025</span>
+                            <i class="bi bi-controller"></i>
+                            <span class="project-tag-top">Educação &amp; Jogos</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">RPG Combat, Tetris, Mundo SENAI &amp; Aulas</h3>
+                            <p class="small text-muted">
+                                RPG Tático (15 classes D20), Tetris, Simulador de Algoritmo de Redes Sociais, Scrum Jogo
+                                Biblioteca, Forca SENAI, Quiz/Bingo/Termo Literário, SAEP e 8 repositórios didáticos.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="mini-tag">JavaScript</span><span class="mini-tag">Python / C++</span><span
+                                    class="mini-tag">Rust</span><span class="mini-tag">SAEP</span>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/LYuri26/JogoRPG" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline-accent">
+                                    <i class="bi bi-github me-1"></i>RPG Combat
+                                </a>
+                                <a href="https://lyuri26.github.io/ForcaTISENAI/" target="_blank"
+                                    rel="noopener noreferrer" class="small">Forca SENAI</a>
                             </div>
                         </div>
                     </div>
@@ -1599,36 +1381,37 @@
             </div>
 
             <!-- Próximos Passos -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="card shadow-sm">
-                        <div class="card-header bg-dark text-white">
-                            <h4 class="mb-0"><i class="bi bi-lightbulb me-2"></i>Próximos Passos</h4>
+            <div class="modern-card p-4 mt-5 reveal-up">
+                <h4 class="h5 mb-4"><i class="bi bi-lightbulb-fill text-accent me-2"></i>Próximos Passos &amp; Pesquisas
+                    Atuais</h4>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="about-item h-100 align-items-start">
+                            <i class="bi bi-gear-wide-connected"></i>
+                            <div>
+                                <strong>Mecatrônica &amp; IIoT Avançado</strong>
+                                <small>Integração entre CLPs industriais, ESP32 com IA local e painéis supervisórios em
+                                    tempo real.</small>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="next-step-card">
-                                        <i class="bi bi-people-fill"></i>
-                                        <h5>RPG Combat Multiplayer</h5>
-                                        <p>Expansão para versão multiplayer online com sistema de batalha em tempo real
-                                            (2026)</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="next-step-card">
-                                        <i class="bi bi-robot"></i>
-                                        <h5>Machine Learning Avançado</h5>
-                                        <p>Integração de ML no reconhecimento de ferramentas com ESP32-CAM</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="next-step-card">
-                                        <i class="bi bi-chat-left-text"></i>
-                                        <h5>Chatbot com LLMs Locais</h5>
-                                        <p>Nova versão do chatbot Fidélis com modelos de linguagem locais</p>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="about-item h-100 align-items-start">
+                            <i class="bi bi-robot"></i>
+                            <div>
+                                <strong>Visão Computacional &amp; Edge AI</strong>
+                                <small>Expansão de modelos YOLOv8 e reconhecimento industrial embarcados de baixa
+                                    latência.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="about-item h-100 align-items-start">
+                            <i class="bi bi-people-fill"></i>
+                            <div>
+                                <strong>Plataformas Educacionais &amp; Multiplayer</strong>
+                                <small>Evolução dos simuladores de PCP (SimuFab), RPG Combat online e ensino
+                                    gamificado.</small>
                             </div>
                         </div>
                     </div>
@@ -1637,62 +1420,122 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 section-bg">
+    <!-- ═══════════════════════════════════════════════════════════════════
+         GITHUB RADAR
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="github-radar" class="py-section section-alt no-print">
         <div class="container">
-            <h2 class="text-center mb-5">Contato</h2>
+            <div class="section-heading text-center mb-4 reveal-up">
+                <span class="section-eyebrow">Integração GitHub REST API</span>
+                <h2>Radar de Repositórios GitHub (Ao Vivo)</h2>
+                <p class="text-muted mx-auto max-w-650">
+                    Escaneamento automático dos repositórios públicos das contas <strong>@LenonYuri96</strong> e
+                    <strong>@LYuri26</strong>.
+                </p>
+            </div>
+
+            <div class="modern-card p-4 mb-4 reveal-up">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                    <h5 class="mb-0"><i class="bi bi-bar-chart-fill text-accent me-2"></i>Linguagens nos Repositórios
+                        Escaneados</h5>
+                    <button id="refreshGithubBtn" class="btn btn-sm btn-outline-accent" type="button">
+                        <i class="bi bi-arrow-clockwise me-1"></i>Reescanear Agora
+                    </button>
+                </div>
+                <div id="githubLangBar" class="lang-stacked-bar mb-2"></div>
+                <div id="githubLangLegend" class="d-flex flex-wrap gap-3 small"></div>
+            </div>
+
+            <div class="row g-3 align-items-center mb-4 reveal-up">
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" id="repoSearch" class="form-control" placeholder="Filtrar repositório...">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="btn-group w-100" role="group" aria-label="Filtrar conta GitHub">
+                        <button type="button" class="btn filter-btn active" data-account="all">Ambas</button>
+                        <button type="button" class="btn filter-btn" data-account="LenonYuri96">@LenonYuri96</button>
+                        <button type="button" class="btn filter-btn" data-account="LYuri26">@LYuri26</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <select id="repoSort" class="form-select" aria-label="Ordenar repositórios">
+                        <option value="updated">Mais recentes</option>
+                        <option value="stars">Mais estrelas</option>
+                        <option value="name">Ordem alfabética</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="githubReposStatus" class="text-center py-4">
+                <div class="spinner-border text-accent" role="status"></div>
+                <p class="mt-2 small text-muted">Escaneando repositórios no GitHub...</p>
+            </div>
+            <div class="row g-3" id="githubReposGrid"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CONTACT — fechamento com CTA
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="contact" class="py-section">
+        <div class="container">
+            <div class="section-heading text-center mb-5 reveal-up">
+                <span class="section-eyebrow">Vamos Conversar</span>
+                <h2>Trabalhe Comigo</h2>
+                <p class="text-muted mx-auto max-w-650">
+                    Estou disponível para <strong>projetos freelance, consultoria, colaborações técnicas</strong> e
+                    <strong>posições CLT/PJ</strong>. Resposta em até 24h.
+                </p>
+            </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="card shadow h-100">
-                        <div class="card-body">
-                            <h3 class="card-title mb-4 text-center">Informações para Contato</h3>
-
-                            <div class="contact-info">
-                                <div class="contact-item">
-                                    <i class="bi bi-envelope-fill contact-icon" aria-hidden="true"></i>
-                                    <div>
-                                        <h5>Email</h5>
-                                        <a href="mailto:lenonyurisilva26@gmail.com">lenonyurisilva26@gmail.com</a>
-                                    </div>
-                                </div>
-
-                                <div class="contact-item">
-                                    <i class="bi bi-whatsapp contact-icon" aria-hidden="true"></i>
-                                    <div>
-                                        <h5>WhatsApp</h5>
-                                        <a href="https://wa.me/5531987184793" target="_blank" rel="noopener noreferrer">
-                                            +55 31 98718-4793
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="bi bi-geo-alt-fill contact-icon" aria-hidden="true"></i>
-                                    <div>
-                                        <h5>Endereço</h5>
-                                        <p>Praça Afonso Arinos, 38 - Centro, Uberaba - MG</p>
-                                    </div>
-                                </div>
-
-                                <div class="contact-item">
-                                    <i class="bi bi-linkedin contact-icon" aria-hidden="true"></i>
-                                    <div>
-                                        <h5>LinkedIn</h5>
-                                        <a href="https://www.linkedin.com/in/lenon-yuri-silva-9a609b19a/"
-                                            target="_blank"
-                                            rel="noopener noreferrer">linkedin.com/in/lenon-yuri-silva</a>
-                                    </div>
-                                </div>
-
-                                <div class="contact-item">
-                                    <i class="bi bi-github contact-icon" aria-hidden="true"></i>
-                                    <div>
-                                        <h5>GitHub</h5>
-                                        <a href="https://github.com/LYuri26" target="_blank"
-                                            rel="noopener noreferrer">github.com/LYuri26</a>
-                                    </div>
-                                </div>
+                <div class="col-lg-9 reveal-up">
+                    <div class="modern-card p-4 p-md-5">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <a href="mailto:lenonyurisilva26@gmail.com" class="contact-tile">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <div><small>E-mail</small><strong>lenonyurisilva26@gmail.com</strong></div>
+                                </a>
                             </div>
+                            <div class="col-md-6">
+                                <a href="https://wa.me/5531987184793" target="_blank" rel="noopener noreferrer"
+                                    class="contact-tile">
+                                    <i class="bi bi-whatsapp"></i>
+                                    <div><small>WhatsApp</small><strong>+55 31 98718-4793</strong></div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://www.linkedin.com/in/lenon-yuri-silva-9a609b19a/" target="_blank"
+                                    rel="noopener noreferrer" class="contact-tile">
+                                    <i class="bi bi-linkedin"></i>
+                                    <div><small>LinkedIn</small><strong>linkedin.com/in/lenon-yuri-silva</strong></div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://github.com/LenonYuri96" target="_blank" rel="noopener noreferrer"
+                                    class="contact-tile">
+                                    <i class="bi bi-github"></i>
+                                    <div><small>GitHub</small><strong>@LenonYuri96 &bull; @LYuri26</strong></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4 pt-3 border-top border-subtle">
+                            <span class="small text-muted">
+                                <i class="bi bi-geo-alt-fill me-1"></i>Centro, Uberaba — MG, Brasil
+                            </span>
+                        </div>
+
+                        <!-- CTA reforçado -->
+                        <div class="text-center mt-4">
+                            <a href="mailto:lenonyurisilva26@gmail.com?subject=Proposta%20de%20Projeto&body=Ol%C3%A1%20Lenon%2C%20gostaria%20de%20conversar%20sobre..."
+                                class="btn btn-hero-primary btn-lg px-4">
+                                <i class="bi bi-send-fill me-2"></i>Enviar Proposta por E-mail
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1700,46 +1543,39 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
     <footer class="py-4">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center g-3">
                 <div class="col-md-6 text-center text-md-start">
-                    <h4>Lenon Yuri Silva</h4>
-                    <p>Desenvolvedor Full Stack | Instrutor Técnico</p>
-                    <p>Combinando habilidades técnicas e visão administrativa para criar soluções inovadoras.
-                    </p>
+                    <h5 class="mb-1 text-white">Lenon Yuri Silva</h5>
+                    <p class="small mb-0 text-white-50">Full Stack • IoT/Mecatrônica &amp; IA • Instrutor Técnico</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <div class="social-icons mb-3">
-                        <a href="https://www.linkedin.com/in/lenon-yuri-silva-9a609b19a/" class="mx-2" target="_blank"
-                            rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="bi bi-linkedin fs-4"></i>
-                        </a>
-                        <a href="https://github.com/LYuri26" class="mx-2" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub">
-                            <i class="bi bi-github fs-4"></i>
-                        </a>
-                        <a href="mailto:lenonyurisilva26@gmail.com" class="mx-2" aria-label="Enviar email">
-                            <i class="bi bi-envelope fs-4"></i>
-                        </a>
+                    <div class="social-icons justify-content-center justify-content-md-end mb-2 no-print">
+                        <a href="https://www.linkedin.com/in/lenon-yuri-silva-9a609b19a/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/LenonYuri96" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub LenonYuri96"><i class="bi bi-github"></i></a>
+                        <a href="https://github.com/LYuri26" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub LYuri26"><i class="bi bi-code-slash"></i></a>
+                        <a href="mailto:lenonyurisilva26@gmail.com" aria-label="Enviar email"><i
+                                class="bi bi-envelope-fill"></i></a>
                     </div>
-                    <p class="mb-0">© <span id="current-year"></span> Lenon Yuri Silva. Todos os direitos
-                        reservados.
-                    </p>
+                    <p class="small mb-0 text-white-50">© <span id="current-year"></span> Lenon Yuri Silva. Todos os
+                        direitos reservados.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
+    <button id="backToTop" class="back-to-top no-print" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript Personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
